@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\;C:\Program Files (x86)\Business Objects\Common\2.8\managed\C:\Program Files\Business Objects\Common\2.8\managed\C:\Archivos de programa\Business Objects\Common\2.8\managed\</ReferencePath>
+    <PublishUrlHistory>D:\REPOSITORY\DEPLOYMENT\Modulo_Proceso\|C:\Users\jesus.ortega\Desktop\RESPALDOJ\SISSA\PROYECTOS\PublicacionTemporal\Modulo_Proceso\|C:\Users\jesus.medrano\Documents\Jesus Medrano Publish\Modulo_Proceso\|C:\Users\jesus.ortega\Desktop\Repositorio Local\RemisionDigital\PublicacionTemporal\Modulo_Proceso\|C:\inetpub\wwwroot\Modulo_Proceso\</PublishUrlHistory>
+    <InstallUrlHistory>http://dvl-mty-v01.sissaseguridad.local/Modulo_Proceso_v4.5/|http://dvl-mty-v01.sissaseguridad.local/QA/Modulo_Proceso/|http://dvl-mty-v01.sissaseguridad.local/QA/Modulo_Facturacion/|http://dvl-mty-v01.sissaseguridad.local/QA/Modulo_Facturacion_v4.5/|http://dvl-mty-v01.sissaseguridad.local/Modulo_Proceso2017/</InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>http://sistemas2/PreRequisitos</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
+    <FallbackCulture>es-ES</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

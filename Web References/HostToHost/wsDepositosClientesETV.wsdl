@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://banorte.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://banorte.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://banorte.com/">
+      <s:element name="RecibirArchivosDepositosTXT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClaveUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivosDepositos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArchivoDeposito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreArchivoCheques" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArchivoCheques" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirArchivosDepositosTXTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibirArchivosDepositosTXTResult" type="tns:ClsDepositoEstatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ClsDepositoEstatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="iEstatus" type="tns:EnumEstatusArchivoDeposito" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDescripcionEstatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sMensajeSalida" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sMensajeError" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EnumEstatusArchivoDeposito">
+        <s:restriction base="s:string">
+          <s:enumeration value="RechazadoEnvio" />
+          <s:enumeration value="PendienteParaPrecarga" />
+          <s:enumeration value="PreCarga" />
+          <s:enumeration value="RechazadoPrecarga" />
+          <s:enumeration value="Pendiente" />
+          <s:enumeration value="Aceptado" />
+          <s:enumeration value="Cancelado" />
+          <s:enumeration value="CorreoEnviado" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RecibirArchivosDepositosTXTSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibirArchivosDepositosTXT" />
+  </wsdl:message>
+  <wsdl:message name="RecibirArchivosDepositosTXTSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibirArchivosDepositosTXTResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsDepositosClientesETVSoap">
+    <wsdl:operation name="RecibirArchivosDepositosTXT">
+      <wsdl:input message="tns:RecibirArchivosDepositosTXTSoapIn" />
+      <wsdl:output message="tns:RecibirArchivosDepositosTXTSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsDepositosClientesETVSoap" type="tns:wsDepositosClientesETVSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecibirArchivosDepositosTXT">
+      <soap:operation soapAction="http://banorte.com/RecibirArchivosDepositosTXT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsDepositosClientesETVSoap12" type="tns:wsDepositosClientesETVSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RecibirArchivosDepositosTXT">
+      <soap12:operation soapAction="http://banorte.com/RecibirArchivosDepositosTXT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsDepositosClientesETV">
+    <wsdl:port name="wsDepositosClientesETVSoap" binding="tns:wsDepositosClientesETVSoap">
+      <soap:address location="http://15.128.4.15/WebService_ETVs/wsDepositosClientesETV.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsDepositosClientesETVSoap12" binding="tns:wsDepositosClientesETVSoap12">
+      <soap12:address location="http://15.128.4.15/WebService_ETVs/wsDepositosClientesETV.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

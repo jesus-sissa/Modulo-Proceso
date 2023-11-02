@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServDatos0" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="RutaEncriptador" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Archivos de programa\GNU\GnuPG\gpg.exe</Value>
+    </Setting>
+    <Setting Name="ServDatos2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="ServDatos9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VACIO</Value>
+    </Setting>
+    <Setting Name="TipoEsquema" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="Modulo_Proceso_HostToHost_wsDepositosClientesETV" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://15.128.4.15/WebService_ETVs/wsDepositosClientesETV.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

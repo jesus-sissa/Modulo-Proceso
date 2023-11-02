@@ -1,0 +1,61 @@
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\bin\Debug\Modulo Master.exe.config
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\bin\Debug\Modulo Master.exe.manifest
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\bin\Debug\Modulo Master.application
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\bin\Debug\Modulo Master.exe
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\bin\Debug\Modulo Master.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\bin\Debug\Modulo Master.xml
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Proceso.vbproj.ResolveComReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.Frm_BuscarCliente.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ClientesProceso.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CuentasModal.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_GuardarArchivo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.Frm_NumeroSugeridoModal.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ParcialesModal.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_DesgloseModal.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ConsultaDepositos.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ConsultaDotaciones.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ConsultaSaldoGeneral.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CancelaResguardo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_AceptaEnvioEfectivo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_About.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_AbrirSesion.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_AsignarServicios.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.Frm_Buscar.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CancelaDotaciones.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CancelaEnvioBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CancelaEnvioEfectivo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CancelarAsignacion.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_CancelaRegEnvioBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ConsultaSaldo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_Contabilizar.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_Corte.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_Dialago.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_EliminarFicha.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_EnviaraBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_EnviarEfectivo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_FichasModal.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_FirmaElectronica.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_LoginContra.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_LoginEmpresa.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_PrepararDotaciones.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_PrepararResguardo.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_RecibeDotacionCajero.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_RecibeResguardoBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ReciboServiciosBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_RegresoaBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_Reporte.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ResguardoaBoveda.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_Splash.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_Login.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_MENU.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ValidaDotaciones.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_VerReporte.resources
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Proceso.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Master.exe.manifest
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Master.application
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Master.exe
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Master.xml
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo Master.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Sirc\Modulo Proceso\obj\Debug\Modulo_Proceso.frm_ReimprimirCorte.resources

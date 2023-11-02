@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="SIRC" Class="SircDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SISSASQL;Initial Catalog=SIAC;Persist Security Info=True;User ID=siac" SettingsObjectName="Modulo_Proceso.My.MySettings" SettingsPropertyName="SIRCConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Pro_Servicios" Member="Pro_Servicios">
+    <Type Name="Pro_Servicios">
+      <Column Name="Id_Servicio" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Sucursal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Sesion" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_ClienteP" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_CajaBancaria" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cia" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Remision" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Recibe" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario_Recibe" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Corte_Turno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_GrupoDepo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Asigna" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Usuario_Asigna" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Fecha_RecibeCajero" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cajero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Fecha_InicioV" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Fecha_FinV" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Fecha_Contabiliza" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Usuario_Contabiliza" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Id_Contabiliza" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Cantidad_Fichas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Cantidad_FichasC" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Estacion_Recibe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estacion_Asigna" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estacion_Verifica" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Estacion_Contabiliza" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Dpto_Procesa" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Association Name="Pro_Servicios_Cat_Remisiones" Member="Cat_Remisiones" ThisKey="Id_Remision" OtherKey="Id_Remision" Type="Cat_Remisiones" />
+      <Association Name="Pro_Servicios_Cat_ClientesProceso" Member="Cat_ClientesProceso" ThisKey="Id_ClienteP" OtherKey="Id_ClienteP" Type="Cat_ClientesProceso" />
+      <Association Name="Pro_Fichas_Pro_Servicios" Member="Pro_Fichas" ThisKey="Id_Servicio" OtherKey="Id_Servicio" Type="Pro_Fichas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cat_Remisiones" Member="Cat_Remisiones">
+    <Type Name="Cat_Remisiones">
+      <Column Name="Id_Remision" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Sucursal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero_Remision" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Envases" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="EnvasesSN" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Morralla" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Moneda_Local" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Importe" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cia" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_CiaProp" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Fecha_Registro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario_Registro" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Modo_Captura" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Movimiento" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Pro_Servicios_Cat_Remisiones" Member="Pro_Servicios" ThisKey="Id_Remision" OtherKey="Id_Remision" Type="Pro_Servicios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cat_ClientesProceso" Member="Cat_ClientesProceso">
+    <Type Name="Cat_ClientesProceso">
+      <Column Name="Id_ClienteP" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Sucursal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cliente" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Clave_Cliente" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre_Comercial" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion_Comercial" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Id_Ciudad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Id_CajaBancaria" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cia" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_GrupoF" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_TipoDeposito" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Id_GrupoDepo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Id_GrupoDota" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Numero_Contrato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modo_Captura" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Requiere_Cuenta" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Adicional1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Adicional2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Adicional3" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Pro_Servicios_Cat_ClientesProceso" Member="Pro_Servicios" ThisKey="Id_ClienteP" OtherKey="Id_ClienteP" Type="Pro_Servicios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pro_Cuentas" Member="Pro_Cuentas">
+    <Type Name="Pro_Cuentas">
+      <Column Name="Id_Cuenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_CajaBancaria" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero_Cuenta" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Ciudad" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Modo_Captura" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Referenciada" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Referencia_Fija" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Pro_Fichas_Pro_Cuentas" Member="Pro_Fichas" ThisKey="Id_Cuenta" OtherKey="Id_Cuenta" Type="Pro_Fichas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pro_Archivos" Member="Pro_Archivos">
+    <Type Name="Pro_Archivos">
+      <Column Name="Id_Archivo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Num_Proceso" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero_Archivo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre_Archivo" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Genera" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Aplicacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario_Genera" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Cancela" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Usuario_Cancela" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Id_Sesion" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cia" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_CajaBancaria" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cajero" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_GrupoDepo" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Corte_Turno" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Estacion_Genera" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Estacion_Cancela" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Id_SesionGenera" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_SesionCancela" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Sucursal" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pro_Fichas" Member="Pro_Fichas">
+    <Type Name="Pro_Fichas">
+      <Column Name="Id_Ficha" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Servicio" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cuenta" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero_Ficha" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Tipo_Ficha" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Importe_Efectivo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe_Cheques" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe_Otros" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dif_Efectivo" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dif_Cheques" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dif_Otros" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Referencia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Id_Referencia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Referencia2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha_Captura" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Estacion_Captura" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cheques_Propios" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Cheques_Otros" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Cheques_PropiosImp" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Cheques_OtrosImp" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe_Billetes" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Importe_Monedas" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Archivo" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="Pro_Fichas_Pro_Servicios" Member="Pro_Servicios" ThisKey="Id_Servicio" OtherKey="Id_Servicio" Type="Pro_Servicios" />
+      <Association Name="Pro_Fichas_Pro_Cuentas" Member="Pro_Cuentas" ThisKey="Id_Cuenta" OtherKey="Id_Cuenta" Type="Pro_Cuentas" />
+      <Association Name="Pro_Fichas_Cat_Monedas" Member="Cat_Monedas" ThisKey="Id_Moneda" OtherKey="Id_Moneda" Type="Cat_Monedas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cat_Monedas" Member="Cat_Monedas">
+    <Type Name="Cat_Monedas">
+      <Column Name="Id_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Clave_Moneda" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Registro" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Usuario_Registro" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Cat_Monedas_Cat_Denominaciones" Member="Cat_Denominaciones" ThisKey="Id_Moneda" OtherKey="Id_Moneda" Type="Cat_Denominaciones" />
+      <Association Name="Pro_Fichas_Cat_Monedas" Member="Pro_Fichas" ThisKey="Id_Moneda" OtherKey="Id_Moneda" Type="Pro_Fichas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cat_Denominaciones" Member="Cat_Denominaciones">
+    <Type Name="Cat_Denominaciones">
+      <Column Name="Id_Denominacion" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Moneda" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Presentacion" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Denominacion" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadXBolsa" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CantidadXBolsaB" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Char" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Cat_Monedas_Cat_Denominaciones" Member="Cat_Monedas" ThisKey="Id_Moneda" OtherKey="Id_Moneda" Type="Cat_Monedas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CAT_RemisionesD_Create" Method="CAT_RemisionesD_Create">
+    <Parameter Name="Id_Remision" Parameter="id_Remision" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Id_Moneda" Parameter="id_Moneda" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Importe_Efectivo" Parameter="importe_Efectivo" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Importe_Documentos" Parameter="importe_Documentos" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CAT_Remisiones_Create" Method="CAT_Remisiones_Create">
+    <Parameter Name="Id_Sucursal" Parameter="id_Sucursal" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Numero_Remision" Parameter="numero_Remision" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Envases" Parameter="envases" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="EnvasesSN" Parameter="envasesSN" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Moneda_Local" Parameter="moneda_Local" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Id_Cia" Parameter="id_Cia" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Id_CiaProp" Parameter="id_CiaProp" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="ImporteTotal" Parameter="importeTotal" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Morralla" Parameter="morralla" Type="System.Char" DbType="VarChar(1)" />
+    <ElementType Name="CAT_Remisiones_CreateResult">
+      <Column Name="Column1" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CAT_Envases_Create" Method="CAT_Envases_Create">
+    <Parameter Name="Id_Sucursal" Parameter="id_Sucursal" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Id_Remision" Parameter="id_Remision" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Id_TipoE" Parameter="id_TipoE" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Numero" Parameter="numero" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Usuario_Registro" Parameter="usuario_Registro" Type="System.Decimal" DbType="Decimal" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Pro_Saldo_Update" Method="Pro_Saldo_Update">
+    <Parameter Name="Id_CajaBancaria" Parameter="id_CajaBancaria" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="ID_Denominacion" Parameter="iD_Denominacion" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Cantidad" Parameter="cantidad" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="CantidadA" Parameter="cantidadA" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="CantidadB" Parameter="cantidadB" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="CantidadC" Parameter="cantidadC" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="CantidadD" Parameter="cantidadD" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="CantidadE" Parameter="cantidadE" Type="System.Decimal" DbType="Decimal" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Pro_dotaciones_StatusValida" Method="Pro_dotaciones_StatusValida">
+    <Parameter Name="Id_Dotacion" Parameter="id_Dotacion" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Usuario_valida" Parameter="usuario_valida" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="ID_Remision" Parameter="iD_Remision" Type="System.Decimal" DbType="Decimal" />
+    <Parameter Name="Cantidad_Envases" Parameter="cantidad_Envases" Type="System.Decimal" DbType="Decimal" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

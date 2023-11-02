@@ -1,0 +1,18 @@
+﻿Ticket 8073
+-Problema
+	Al intentar buscar una remision no seleciona nunguna apasar de escribirla correctamente
+-Pantalla donde Ocurre el problema
+	Regresar Servicios a Boveda
+-Como llegar a la pantalla
+	Menu Procesos
+	subMenu Regresar Servicios a Boveda
+
+-Analisis
+	Error en codigo, se comparaba el numero de remision capturado con la columna que no era.
+
+-Solucion 
+	Se cambio la posicion de la columa que era la pocision 1 a la posicion 0 
+-Prueba Preliminar
+	Se busca un numero de remision existe y no checkea ningun combobox
+-Prueba Final
+	Al buscar un numero de remision existe y dar al boton buscar se checkea el combobox de la remision en cuestion

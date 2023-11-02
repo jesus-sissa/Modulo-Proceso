@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Sirc">
+  <DataContextMoniker Name="/SircDataContext" />
+  <nestedChildShapes>
+    <classShape Id="af5c4106-978b-4efd-9c12-22d9d782c233" isExpanded="false" absoluteBounds="3.625, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Pro_Servicios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efeef6dd-93bc-494c-8a9e-41aa6c712ed2" absoluteBounds="3.6399999999999997, 0.96, 1.9700000000000002, 4.8091837565104161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c597a7f0-381d-4284-b241-4a9f0829dbe0" isExpanded="false" absoluteBounds="1.25, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Cat_Remisiones" />
+      <nestedChildShapes>
+        <elementListCompartment Id="225c45c4-643b-44d5-a31d-24851dc90c7c" absoluteBounds="1.2649999999999997, 0.96, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 0.725); (3.25 : 0.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SircDataContext/Pro_Servicios/Pro_Servicios_Cat_Remisiones" />
+      <nodes>
+        <classShapeMoniker Id="af5c4106-978b-4efd-9c12-22d9d782c233" />
+        <classShapeMoniker Id="c597a7f0-381d-4284-b241-4a9f0829dbe0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c3c0ba9e-be6b-47bf-83c6-403798818706" isExpanded="false" absoluteBounds="6, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Cat_ClientesProceso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcd1542a-325a-4bd1-a037-72b16806aa93" absoluteBounds="6.015, 0.96, 1.9700000000000002, 3.494405110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 0.725); (6 : 0.725)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SircDataContext/Pro_Servicios/Pro_Servicios_Cat_ClientesProceso" />
+      <nodes>
+        <classShapeMoniker Id="af5c4106-978b-4efd-9c12-22d9d782c233" />
+        <classShapeMoniker Id="c3c0ba9e-be6b-47bf-83c6-403798818706" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0d3e3a99-2207-4213-8ce4-cedcf44a3b52" isExpanded="false" absoluteBounds="6, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Pro_Cuentas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc5856da-4caf-4b1d-a54c-8d084f52a2df" absoluteBounds="6.015, 1.71, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4883b63c-7ac3-4209-8483-ece9be984119" isExpanded="false" absoluteBounds="1.25, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Pro_Archivos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba4412bd-5c79-4785-b261-a21bd9bf6cfe" absoluteBounds="1.2650000000000001, 1.71, 1.9700000000000002, 3.823099772135417" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a48e3a75-7eec-4bd2-b0e3-f3bbfd168761" isExpanded="false" absoluteBounds="3.625, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Pro_Fichas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8d0979f-8581-47e0-88d2-5be6bba1b7d8" absoluteBounds="3.6399999999999997, 1.71, 1.9700000000000002, 4.3161417643229161" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 1.25); (4.625 : 0.95)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SircDataContext/Pro_Fichas/Pro_Fichas_Pro_Servicios" />
+      <nodes>
+        <classShapeMoniker Id="a48e3a75-7eec-4bd2-b0e3-f3bbfd168761" />
+        <classShapeMoniker Id="af5c4106-978b-4efd-9c12-22d9d782c233" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 1.475); (6 : 1.475)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SircDataContext/Pro_Fichas/Pro_Fichas_Pro_Cuentas" />
+      <nodes>
+        <classShapeMoniker Id="a48e3a75-7eec-4bd2-b0e3-f3bbfd168761" />
+        <classShapeMoniker Id="0d3e3a99-2207-4213-8ce4-cedcf44a3b52" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="31c311d4-be92-4c2f-90df-f56c76c05e9d" isExpanded="false" absoluteBounds="3.625, 2, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Cat_Monedas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48df080a-395d-4925-8499-b7f7ab203f93" absoluteBounds="3.6399999999999997, 2.46, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 1.7); (4.625 : 2)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SircDataContext/Pro_Fichas/Pro_Fichas_Cat_Monedas" />
+      <nodes>
+        <classShapeMoniker Id="a48e3a75-7eec-4bd2-b0e3-f3bbfd168761" />
+        <classShapeMoniker Id="31c311d4-be92-4c2f-90df-f56c76c05e9d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8585ecea-e37f-44e8-a038-94ba54003b32" isExpanded="false" absoluteBounds="6.125, 2, 2, 0.45">
+      <DataClassMoniker Name="/SircDataContext/Cat_Denominaciones" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d92a5783-7017-466a-a37a-2526acf72073" absoluteBounds="6.14, 2.46, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 2.225); (6.125 : 2.225)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SircDataContext/Cat_Monedas/Cat_Monedas_Cat_Denominaciones" />
+      <nodes>
+        <classShapeMoniker Id="31c311d4-be92-4c2f-90df-f56c76c05e9d" />
+        <classShapeMoniker Id="8585ecea-e37f-44e8-a038-94ba54003b32" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

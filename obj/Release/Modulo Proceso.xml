@@ -1,0 +1,707 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ModuloProceso
+</name>
+</assembly>
+<members>
+<member name="M:Modulo_Proceso.cp_cmb_SimpleParametros.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleParametros.LimpiarParametros">
+	<summary>
+ Quita todos los parametros del procedimiento almacenado
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleParametros.AgregarParametros(System.String,System.Data.SqlDbType,System.Object)">
+	<summary>
+ Agrega un nuevo parametro a la consulta
+ </summary>
+	<param name="Nombre">Es el nombre del parametro</param>
+	<param name="tipo">Es el tipo de datos de sql</param>
+	<param name="valor">Es el valor del parametro</param>
+</member><member name="M:Modulo_Proceso.frm_CatalogoCuentas.CreaTbl_Referencias">
+	<summary>
+ Aqui se crea la tabla de referencias
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Modulo_Proceso.frm_CatalogoCuentas.ActualizarReferencias">
+	<summary>
+ Actualiza los valores de la lista lsv_2_Referencia de acuerdo a la tabla Tbl_Referencias
+ </summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_HojaTrabajoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_LogoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Cat_SucursalesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_ChequesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasEfectivoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_TabularDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_TabularFichaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionesFichasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_HojaTrabajoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_LogoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Cat_SucursalesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_ChequesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasEfectivoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_TabularRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_TabularFichaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionesFichasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_HojaTrabajoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_LogoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Cat_SucursalesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_ChequesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasEfectivoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_TabularRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_TabularFichaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionesFichasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:Modulo_Proceso.FuncionesGlobales.LlenarMinutos(System.Int32,Modulo_Proceso.cp_cmb_Manual)">
+	<summary>
+ Sirve para llenar un combo con intervalos de minutos definidos
+ </summary>
+	<param name="Minutos">Es el numero de minutos que se van a avanzar con cada ciclo</param>
+	<param name="combo">es el combo que se va a llentar</param>
+</member><member name="M:Modulo_Proceso.FuncionesGlobales.fn_Buscar_enListViewPredict(System.Windows.Forms.ListView@,System.String,System.Int32)">
+	<summary>
+ Para Buscar en una lista pero que los elementos buscados
+ estén en la posición inicial, o sea, que el elemento de la lista
+ empiese por lo escrito en el textbox
+ </summary>
+</member><member name="P:Modulo_Proceso.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Modulo_Proceso.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:Modulo_Proceso.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_Parametro.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_Parametro.CreaTabla">
+	<summary>
+ Crea una tabla basada en las propiedades del combo
+ </summary>
+	<returns>Es la tabla resultante de la funcion ejecutaconsulta</returns>
+	<remarks>Esta funcion es global</remarks>
+</member><member name="F:Modulo_Proceso.frm_VisorImagenes.Imagen">
+	<summary> Se recibe una Imagen </summary>
+</member><member name="F:Modulo_Proceso.frm_VisorImagenes.ImagenBytes">
+	<summary> Se recibe una Imagen en formato de Bytes </summary>
+</member><member name="F:Modulo_Proceso.frm_VisorImagenes.RutaImagen">
+	<summary> Se recibe la Ruta donde se encuentra la imagen </summary>
+</member><member name="T:Modulo_Proceso.frm_VisorImagenes">
+	<summary> Gestión de Imagenes (al ocurrir un error se muestra el Logo de SISSA) </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Pista">
+	<summary>
+ Indica si se envia o no el parametro  @Pista
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Empresa">
+	<summary>
+ Indica si se va a enviar la variable global Empresa al StoredProcedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Sucursal">
+	<summary>
+ Indica si se va a enviar o no la variable global sucursal al stored procedure
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltradoParam._Filtro_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ busca el valor del textbox en la columna clave
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.cp_cmb_SimpleFiltrado_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ escribe en el filtro el numero de clave que se ha seleccionado
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Clave">
+	<summary>
+ Es un campo que desplega la clave del cliente en la esquina superior izquierda de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Cia">
+	<summary>
+ Es un campo que desplega el nombre de la cia de traslado en la parte superior de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Unidad">
+	<summary>
+ Es un campo que desplega la unidad en la esquina superior derecha de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Fecha">
+	<summary>
+ El la fecha de impresión de la remision, siempre es la fecha actual
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Horario">
+	<summary>
+ El el checkbox de horario que va a ir tachado en la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Servicio">
+	<summary>
+ El el checkbox de servicio que va a ir tachado en la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Tipo_Imprime_Denominaciones">
+	<summary>
+ Indica si se imprimirá solo la cantidad de Piezas, Solo los Importes o Ambos
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Origen">
+	<summary>
+ Es el valor que se colocara en el campo "valores recibidos de:"
+ de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.DireccionOrigen">
+	<summary>
+ Es el valor que se colocara en el campo "Direccion:"
+ Debajo del campo "valores recibidos de:" de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Efectivo">
+	<summary>
+ Es en el total en efectivo cuyo valor se colocara en el 
+ campo "EFEVO." de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Doctos">
+	<summary>
+ Es el importe en documentos que va contenido en el campo
+ "DOCTOS." de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.MonedaNacional">
+	<summary>
+ Es el importe en Moneda Local que va contenido en
+ el campo "Moneda Nacional" de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.MonedaExtranjera">
+	<summary>
+ Es la suma de los importes en monedas diferentes a la local
+ sin convertir a la moneda local y van contenidas en el campo
+ "MONEDA EXTRANJERA" de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Otros">
+	<summary>
+ Es el import de otros documentos que va contenido en el campo
+ "OTROS" de la tabla
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Imprime_EquivalenteMN">
+	<summary>
+ Indica si se imprimira en la remision el campo  Equivalente (MN)
+ </summary>
+	<value>
+ Cuando el Campo es True = Se muestra el valor
+ Cuando el Campo es False = No se muestra el valor
+ El valor por defautl es False
+ </value>
+</member><member name="P:Modulo_Proceso.cp_Remision.EquivalenteMN">
+	<summary>
+ Es el importe en moneda extranjera convertido a moneda local
+ va contenido en el campo "Equivalente MN"
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Total">
+	<summary>
+ Es la suma de los importes en Moneda Nacional, Otros y Equivalente de Moneda Extranjera
+ que ira contenido en el campo "Total" de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.EnvasesBilletes">
+	<summary>
+ Es la cantidad de envases con billetes
+ y va contenida en el campor "Envases con Billetes"
+ de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.EnvasesMorralla">
+	<summary>
+ Es la cantidad de envases con morralla y va contenida en el campo
+ "Con Morralla de la remision"
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Modulo_Proceso.cp_Remision.EnvasesDocumentos">
+	<summary>
+ Es la cantidad de envases con Documentos y va contenida en el campo
+ "Envases Documentos de la Remision"
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Modulo_Proceso.cp_Remision.EnvasesSN">
+	<summary>
+ Es la cantidad de Envases Sin Numero y va contenido en el campo "Envases con Morralla" en la Remision
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Modulo_Proceso.cp_Remision.EnvasesTotal">
+	<summary>
+ Es la suma "Tentativamente" de los envases con billetes y los envases con Morralla
+ y se desplega en el campo total
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Modulo_Proceso.cp_Remision.CantidadLetra">
+	<summary>
+ Es el importe total en texto que va en el campo "Cantidad en Letra:"
+ de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Destino">
+	<summary>
+ Es el valor que va en el campo Entregar Envases de la remisión
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.DireccionDestino">
+	<summary>
+ Es el valor que va en el campo remision de la remision
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.NumeroMach">
+	<summary>
+ Es el valor que va en el campo No de Match de la Remisión
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Sellos">
+	<summary>
+ Es el valor que va en el campo sellos
+ Equivale a 2 renglones
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Hora">
+	<summary>
+ Es la hora de impresion siempre es la hora actual
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Remitente">
+	<summary>
+ Es el valor que se va a imprimir en el campo Remitente
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B1000">
+	<summary>
+ Es la cantidad de Billetes de $1000.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B500">
+	<summary>
+ Es la cantidad de Billetes de $500.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B200">
+	<summary>
+ Es la cantidad de Billetes de $200.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B100">
+	<summary>
+ Es la cantidad de Billetes de $100.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B50">
+	<summary>
+ Es la cantidad de Billetes de $50.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B20">
+	<summary>
+ Es la cantidad de Billetes de $20.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B10">
+	<summary>
+ Es la cantidad de Billetes de $10.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B5">
+	<summary>
+ Es la cantidad de Billetes de $5.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B2">
+	<summary>
+ Es la cantidad de Billetes de $2.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B1">
+	<summary>
+ Es la cantidad de Billetes de $1.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M20">
+	<summary>
+ Es la cantidad de Monedas de $20.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M10">
+	<summary>
+ Es la cantidad de Monedas de $10.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M5">
+	<summary>
+ Es la cantidad de Monedas de $5.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M2">
+	<summary>
+ Es la cantidad de Monedas de $2.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M1">
+	<summary>
+ Es la cantidad de Monedas de $1.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M05">
+	<summary>
+ Es la cantidad de Monedas de $0.50
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M02">
+	<summary>
+ Es la cantidad de Monedas de $0.20
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M01">
+	<summary>
+ Es la cantidad de Monedas de $0.10
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M005">
+	<summary>
+ Es la cantidad de Monedas de $0.05
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B1000L">
+	<summary>
+ Es el importe en billetes de $1000.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B500L">
+	<summary>
+ Es el importe en billetes de $500.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B200L">
+	<summary>
+ Es el importe en billetes de $200.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B100L">
+	<summary>
+ Es el importe en billetes de $100.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B50L">
+	<summary>
+ Es el importe en billetes de $50.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B20L">
+	<summary>
+ Es el importe en billetes de $20.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B10L">
+	<summary>
+ Es el importe en billetes de $10.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B5L">
+	<summary>
+ Es el importe en billetes de $5.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B2L">
+	<summary>
+ Es el importe en billetes de $2.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.B1L">
+	<summary>
+ Es el importe en billetes de $1.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M20L">
+	<summary>
+ Es el importe en monedas de $20.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M10L">
+	<summary>
+ Es el importe en monedas de $10.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M5L">
+	<summary>
+ Es el importe en monedas de $5.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M2L">
+	<summary>
+ Es importe en monedas de $2.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M1L">
+	<summary>
+ Es el importe en monedas de $1.00
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M05L">
+	<summary>
+ Es el importe en monedas de $0.50
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M02L">
+	<summary>
+ Es el importe en monedas de $0.20
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M01L">
+	<summary>
+ Es importe en monedas de $0.10
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.M005L">
+	<summary>
+ Es el importe en monedas de $0.05
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.TotalEnvio">
+	<summary>
+ Es el importe de la suma total de las denominaciones de la remision
+ el cual se coloca dentro del campo total envio
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Imprime_Denominaciones">
+	<summary>
+ Para saber si se imprimen o no las denominaciones
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Formato2011">
+	<summary>
+ Para saber si se imprimen en el Formato Tradicional o en el Nuevo Formato 2011
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Id_Moneda">
+	<summary>
+ Para imprimir en la cantidad con letra
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_Remision.Moneda">
+	<summary>
+ Descripcion de la Moneda 'Para imprimir en la cantidad con letra
+ </summary>
+</member><member name="T:Modulo_Proceso.Dpto">
+	<summary>
+ Para la Recepción de Materiales
+ Para la Consulta del inventario de materiales
+ Para la Consulta de Entrada de Materiales
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.Pista">
+	<summary>
+ Indica si se envia o no el parametro  @Pista
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.Empresa">
+	<summary>
+ Indica si se va a enviar la variable global Empresa al StoredProcedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.Sucursal">
+	<summary>
+ Indica si se va a enviar o no la variable global sucursal al stored procedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.StoredProcedure">
+	<summary>
+ Es el stored procedure del que se va a alimentar el combobox
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_Simple.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="T:Modulo_Proceso.cp_cmb_Simple">
+	<summary>
+ Es un combobox que se alimenta de un storedprocedure solamente especificando @Pista = '', puede o no alimentar una variable global
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_BuscarClientes_LlenarLista(Modulo_Proceso.cp_Listview,System.Boolean,System.Boolean)">
+	<summary>
+ Llena la lista lsv_Clientes
+ </summary>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_BuscarClientesP_LlenarLista(Modulo_Proceso.cp_Listview,System.Boolean,System.Int32)">
+	<summary>
+ Llena la lista lsv_Clientes
+ </summary>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_BuscarClientes_LlenarListaEmpleados(Modulo_Proceso.cp_Listview)">
+	<summary>
+ Llena la lista lsv_Clientes con Empleados
+ </summary>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_BuscarClientes_LlenarListaCajasBancarias(Modulo_Proceso.cp_Listview)">
+	<summary>
+ Llena la lista lsv_Clientes con Cajas Bancarias
+ </summary>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_LlenarLista(Modulo_Proceso.cp_Listview,System.Int32,System.Int32)">
+	<summary>
+ Llena una lista de la tabla Cat_ClientesProceso
+ </summary>
+	<param name="lsv">Es la lista que se va a llenar</param>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_LlenarLista(Modulo_Proceso.cp_Listview,System.Int32,System.Int32,System.Boolean)">
+	<summary>
+ Llena una lista de la tabla Cat_ClientesProceso
+ </summary>
+	<param name="lsv">Es la lista que se va a llenar</param>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_Crear(System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.Char,System.Int32,System.Int32,System.Int32,System.String)">
+	<summary>
+ Da de alta un nuevo registro en la tabla Cat_ClientesProceso
+ </summary>
+	<param name="Clave_Cliente">Es la clave del cliente</param>
+	<param name="Direccion_Comercial">Es la Direccion del cliente</param>
+	<param name="Id_CajaBancaria">Es el id de la tabla caja bancaria</param>
+	<param name="Id_Ciudad">Es el id de la ciudad</param>
+	<param name="Id_Cliente">Es el id del cliente</param>
+	<param name="Id_Grupo">Es el id del grupo</param>
+	<param name="Nombre_Comercial">Es el nombre comercial</param>
+	<param name="Numero_Contrato">Es el numero del contrato</param>
+	<param name="Requiere_Cuenta">Es un campo S / N que indica si el cliente tiene cuentas</param>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_Modificar(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.Char,System.Int32,System.Int32)">
+	<summary>
+ Modifica registro en la tabla Cat_ClientesProceso
+ </summary>
+	<param name="Clave_Cliente">Es la clave del cliente</param>
+	<param name="Direccion_Comercial">Es la Direccion del cliente</param>
+	<param name="Id_CajaBancaria">Es el id de la tabla caja bancaria</param>
+	<param name="Id_Ciudad">Es el id de la ciudad</param>
+	<param name="Id_Cliente">Es el id del cliente</param>
+	<param name="Id_Grupo">Es el id del grupo</param>
+	<param name="Nombre_Comercial">Es el nombre comercial</param>
+	<param name="Numero_Contrato">Es el numero del contrato</param>
+	<param name="Requiere_Cuenta">Es un campo S / N que indica si el cliente tiene cuentas</param>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_Leer(System.Int32)">
+	<summary>
+ Obtiene toda la informacion del registro seleccionado de la tabla Cat_ClientesProceso
+ </summary>
+	<param name="Id">Es el registro seleccionado</param>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ParametrosG_Read">
+	<summary>
+ Obtiene toda la informacion de la empresa actual
+ </summary>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_Sucursales_Read(System.Int32)">
+	<summary>
+ Obtiene toda la informacion de la empresa actual
+ </summary>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_Ciudad_Read(System.Int32)">
+	<summary>
+ Obtiene toda la informacion de la ciudad actual
+ </summary>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltrado.Pista">
+	<summary>
+ Indica si se envia o no el parametro  @Pista
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltrado.Empresa">
+	<summary>
+ Indica si se va a enviar la variable global Empresa al StoredProcedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltrado.Sucursal">
+	<summary>
+ Indica si se va a enviar o no la variable global sucursal al stored procedure
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltrado.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltrado._Filtro_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ busca el valor del textbox en la columna clave
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltrado.cp_cmb_SimpleFiltrado_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ escribe en el filtro el numero de clave que se ha seleccionado
+ </summary>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.ComboSiNo(Modulo_Proceso.cp_cmb_Manual)">
+	<summary>
+ Agrega los valores si y no a un combo
+ </summary>
+	<param name="cmb">Es el combo al que se le van a agregar los valores</param>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.LimpiarFicha1">
+	<summary>
+ Limpia todas las casilas de la ficha 1
+ </summary>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.LimpiarParcialFicha1">
+	<summary>
+ Limpia solo las casillas que se ven afectadas al cambiar la casilla del cliente
+ </summary>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.ValidarFicha1">
+	<summary>
+ Valida que no existan casillas vacias en la ficha 1
+ </summary>
+</member>
+</members>
+</doc>

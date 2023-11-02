@@ -1,0 +1,343 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ModuloMaster
+</name>
+</assembly>
+<members>
+<member name="T:Modulo_Proceso.ds_Reportes.Cat_SucursalesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_HojaTrabajoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_LogoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_ChequesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasEfectivoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Cat_SucursalesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_HojaTrabajoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_LogoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_ChequesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasEfectivoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Cat_SucursalesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_HojaTrabajoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_DenominacionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_LogoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_ChequesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes.Tbl_FichasEfectivoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Modulo_Proceso.ds_Reportes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_ReportesTableAdapters.Cat_SucursalesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.UpdateUpdatedRows(Modulo_Proceso.ds_Reportes,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.UpdateInsertedRows(Modulo_Proceso.ds_Reportes,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.UpdateDeletedRows(Modulo_Proceso.ds_Reportes,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.UpdateAll(Modulo_Proceso.ds_Reportes)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Modulo_Proceso.ds_ReportesTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleParametros.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleParametros.LimpiarParametros">
+	<summary>
+ Quita todos los parametros del procedimiento almacenado
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleParametros.AgregarParametros(System.String,System.Data.SqlDbType,System.Object)">
+	<summary>
+ Agrega un nuevo parametro a la consulta
+ </summary>
+	<param name="Nombre">Es el nombre del parametro</param>
+	<param name="tipo">Es el tipo de datos de sql</param>
+	<param name="valor">Es el valor del parametro</param>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltrado.Pista">
+	<summary>
+ Indica si se envia o no el parametro  @Pista
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltrado.Empresa">
+	<summary>
+ Indica si se va a enviar la variable global Empresa al StoredProcedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltrado.Sucursal">
+	<summary>
+ Indica si se va a enviar o no la variable global sucursal al stored procedure
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltrado.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltrado._Filtro_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ busca el valor del textbox en la columna clave
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltrado.cp_cmb_SimpleFiltrado_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ escribe en el filtro el numero de clave que se ha seleccionado
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_Parametro.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_Parametro.CreaTabla">
+	<summary>
+ Crea una tabla basada en las propiedades del combo
+ </summary>
+	<returns>Es la tabla resultante de la funcion ejecutaconsulta</returns>
+	<remarks>Esta funcion es global</remarks>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.ComboSiNo(Modulo_Proceso.cp_cmb_Manual)">
+	<summary>
+ Agrega los valores si y no a un combo
+ </summary>
+	<param name="cmb">Es el combo al que se le van a agregar los valores</param>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.LimpiarFicha1">
+	<summary>
+ Limpia todas las casilas de la ficha 1
+ </summary>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.LimpiarParcialFicha1">
+	<summary>
+ Limpia solo las casillas que se ven afectadas al cambiar la casilla del cliente
+ </summary>
+</member><member name="M:Modulo_Proceso.frm_ClientesProceso.ValidarFicha1">
+	<summary>
+ Valida que no existan casillas vacias en la ficha 1
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Pista">
+	<summary>
+ Indica si se envia o no el parametro  @Pista
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Empresa">
+	<summary>
+ Indica si se va a enviar la variable global Empresa al StoredProcedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Sucursal">
+	<summary>
+ Indica si se va a enviar o no la variable global sucursal al stored procedure
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltradoParam._Filtro_TextChanged(System.Object,System.EventArgs)">
+	<summary>
+ busca el valor del textbox en la columna clave
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_SimpleFiltradoParam.cp_cmb_SimpleFiltrado_SelectedIndexChanged(System.Object,System.EventArgs)">
+	<summary>
+ escribe en el filtro el numero de clave que se ha seleccionado
+ </summary>
+</member><member name="P:Modulo_Proceso.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Modulo_Proceso.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:Modulo_Proceso.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:Modulo_Proceso.frm_CuentasModal.CreaTbl_Referencias">
+	<summary>
+ Aqui se crea la tabla de referencias
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Modulo_Proceso.frm_CuentasModal.CreaTbl_Cuentas">
+	<summary>
+ Aqui se crea la tabla de referencias
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Modulo_Proceso.frm_CuentasModal.ActualizarReferencias">
+	<summary>
+ Actualiza los valores de la lista lsv_2_Referencia de acuerdo a la tabla Tbl_Referencias
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.Pista">
+	<summary>
+ Indica si se envia o no el parametro  @Pista
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.Empresa">
+	<summary>
+ Indica si se va a enviar la variable global Empresa al StoredProcedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.Sucursal">
+	<summary>
+ Indica si se va a enviar o no la variable global sucursal al stored procedure
+ </summary>
+</member><member name="P:Modulo_Proceso.cp_cmb_Simple.StoredProcedure">
+	<summary>
+ Es el stored procedure del que se va a alimentar el combobox
+ </summary>
+</member><member name="M:Modulo_Proceso.cp_cmb_Simple.Actualizar">
+	<summary>
+ Actualiza el contenido del combo utilizando el stored procedure
+ </summary>
+	<remarks>'si requiere la sucursal hay que marcar sucursal como true</remarks>
+</member><member name="T:Modulo_Proceso.cp_cmb_Simple">
+	<summary>
+ Es un combobox que se alimenta de un storedprocedure solamente especificando @Pista = '', puede o no alimentar una variable global
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_LlenarLista(Modulo_Proceso.cp_Listview,System.Int32,System.Int32)">
+	<summary>
+ Llena una lista de la tabla Cat_ClientesProceso
+ </summary>
+	<param name="lsv">Es la lista que se va a llenar</param>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_Crear(System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.Char,System.Int32,System.Int32)">
+	<summary>
+ Da de alta un nuevo registro en la tabla Cat_ClientesProceso
+ </summary>
+	<param name="Clave_Cliente">Es la clave del cliente</param>
+	<param name="Direccion_Comercial">Es la Direccion del cliente</param>
+	<param name="Id_CajaBancaria">Es el id de la tabla caja bancaria</param>
+	<param name="Id_Ciudad">Es el id de la ciudad</param>
+	<param name="Id_Cliente">Es el id del cliente</param>
+	<param name="Id_Grupo">Es el id del grupo</param>
+	<param name="Nombre_Comercial">Es el nombre comercial</param>
+	<param name="Numero_Contrato">Es el numero del contrato</param>
+	<param name="Requiere_Cuenta">Es un campo S / N que indica si el cliente tiene cuentas</param>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_Modificar(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.Char,System.Int32,System.Int32)">
+	<summary>
+ Modifica registro en la tabla Cat_ClientesProceso
+ </summary>
+	<param name="Clave_Cliente">Es la clave del cliente</param>
+	<param name="Direccion_Comercial">Es la Direccion del cliente</param>
+	<param name="Id_CajaBancaria">Es el id de la tabla caja bancaria</param>
+	<param name="Id_Ciudad">Es el id de la ciudad</param>
+	<param name="Id_Cliente">Es el id del cliente</param>
+	<param name="Id_Grupo">Es el id del grupo</param>
+	<param name="Nombre_Comercial">Es el nombre comercial</param>
+	<param name="Numero_Contrato">Es el numero del contrato</param>
+	<param name="Requiere_Cuenta">Es un campo S / N que indica si el cliente tiene cuentas</param>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_BuscarClientes_LlenarLista(System.Boolean)">
+	<summary>
+ Llena la lista lsv_Clientes
+ </summary>
+	<returns>Devuelve true en caso de que se haya hecho correctamente la acutalizacion</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ClientesProceso_Leer(System.Int32)">
+	<summary>
+ Obtiene toda la informacion del registro seleccionado de la tabla Cat_ClientesProceso
+ </summary>
+	<param name="Id">Es el registro seleccionado</param>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_ParametrosG_Read">
+	<summary>
+ Obtiene toda la informacion de la empresa actual
+ </summary>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="M:Modulo_Proceso.Cn_Proceso.fn_Ciudad_Read(System.Int32)">
+	<summary>
+ Obtiene toda la informacion de la ciudad actual
+ </summary>
+	<returns>Devuelve un arreglo con los valores del registro</returns>
+</member><member name="M:Modulo_Proceso.FuncionesGlobales.LlenarMinutos(System.Int32,Modulo_Proceso.cp_cmb_Manual)">
+	<summary>
+ Sirve para llenar un combo con intervalos de minutos definidos
+ </summary>
+	<param name="Minutos">Es el numero de minutos que se van a avanzar con cada ciclo</param>
+	<param name="combo">es el combo que se va a llentar</param>
+</member>
+</members>
+</doc>
