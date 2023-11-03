@@ -452,7 +452,7 @@ Public Class frm_DetalleDepositos
                     j += 1
                 End If
 
-                .Range("A" & j).Value = Dr_Servicio.Item("Fecha")
+                .Range("A" & j).Value = Format(CDate(Dr_Servicio.Item("Fecha")), "MM/dd/yyyy") 'Dr_Servicio.Item("Fecha") 
                 .Range("B" & j).Value = Dr_Servicio.Item("Remision")
                 .Range("C" & j).Value = Dr_Servicio.Item("Cliente")
                 .Range("D" & j).Value = Dr_Servicio.Item("Importe")
