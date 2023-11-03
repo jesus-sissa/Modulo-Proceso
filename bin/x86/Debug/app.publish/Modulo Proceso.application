@@ -14,7 +14,7 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Modulo Proceso.exe.manifest" size="16440">
+    <dependentAssembly dependencyType="install" codebase="Application Files\Modulo Proceso_3_0_0_15\Modulo Proceso.exe.manifest" size="16440">
       <assemblyIdentity name="Modulo Proceso.exe" version="3.0.0.15" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
