@@ -197,7 +197,6 @@ Partial Class frm_GuardarArchivo
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents lsv_Servicios As Modulo_Proceso.cp_Listview
     Friend WithEvents gbx_Botones As System.Windows.Forms.GroupBox
     Friend WithEvents btn_Cerrar As System.Windows.Forms.Button
     Friend WithEvents btn_Guardar As System.Windows.Forms.Button
@@ -207,4 +206,5 @@ Partial Class frm_GuardarArchivo
     Friend WithEvents Lbl_Verde As System.Windows.Forms.Label
     Friend WithEvents btn_GuardarXficha As System.Windows.Forms.Button
     Friend WithEvents Lbl_Registros As System.Windows.Forms.Label
+    Friend WithEvents lsv_Servicios As cp_Listview
 End Class

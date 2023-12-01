@@ -35,7 +35,7 @@ Partial Class frm_Corte
         'lbl_Sesion
         '
         Me.lbl_Sesion.AutoSize = True
-        Me.lbl_Sesion.Location = New System.Drawing.Point(64, 12)
+        Me.lbl_Sesion.Location = New System.Drawing.Point(41, 12)
         Me.lbl_Sesion.Name = "lbl_Sesion"
         Me.lbl_Sesion.Size = New System.Drawing.Size(39, 13)
         Me.lbl_Sesion.TabIndex = 0
@@ -43,7 +43,7 @@ Partial Class frm_Corte
         '
         'tbx_Sesion
         '
-        Me.tbx_Sesion.Location = New System.Drawing.Point(109, 12)
+        Me.tbx_Sesion.Location = New System.Drawing.Point(86, 12)
         Me.tbx_Sesion.Name = "tbx_Sesion"
         Me.tbx_Sesion.Size = New System.Drawing.Size(115, 20)
         Me.tbx_Sesion.TabIndex = 1
@@ -51,7 +51,7 @@ Partial Class frm_Corte
         'lbl_CajaBancaria
         '
         Me.lbl_CajaBancaria.AutoSize = True
-        Me.lbl_CajaBancaria.Location = New System.Drawing.Point(30, 38)
+        Me.lbl_CajaBancaria.Location = New System.Drawing.Point(7, 38)
         Me.lbl_CajaBancaria.Name = "lbl_CajaBancaria"
         Me.lbl_CajaBancaria.Size = New System.Drawing.Size(73, 13)
         Me.lbl_CajaBancaria.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class frm_Corte
         'lbl_CorteActual
         '
         Me.lbl_CorteActual.AutoSize = True
-        Me.lbl_CorteActual.Location = New System.Drawing.Point(38, 65)
+        Me.lbl_CorteActual.Location = New System.Drawing.Point(15, 65)
         Me.lbl_CorteActual.Name = "lbl_CorteActual"
         Me.lbl_CorteActual.Size = New System.Drawing.Size(65, 13)
         Me.lbl_CorteActual.TabIndex = 4
@@ -68,9 +68,9 @@ Partial Class frm_Corte
         '
         'tbx_CorteActual
         '
-        Me.tbx_CorteActual.Location = New System.Drawing.Point(109, 65)
+        Me.tbx_CorteActual.Location = New System.Drawing.Point(86, 65)
         Me.tbx_CorteActual.Name = "tbx_CorteActual"
-        Me.tbx_CorteActual.Size = New System.Drawing.Size(100, 20)
+        Me.tbx_CorteActual.Size = New System.Drawing.Size(115, 20)
         Me.tbx_CorteActual.TabIndex = 5
         '
         'Btn_Generar
@@ -93,11 +93,11 @@ Partial Class frm_Corte
         Me.cmb_CajaBancaria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_CajaBancaria.Empresa = False
         Me.cmb_CajaBancaria.FormattingEnabled = True
-        Me.cmb_CajaBancaria.Location = New System.Drawing.Point(109, 38)
+        Me.cmb_CajaBancaria.Location = New System.Drawing.Point(86, 38)
         Me.cmb_CajaBancaria.MaxDropDownItems = 20
         Me.cmb_CajaBancaria.Name = "cmb_CajaBancaria"
         Me.cmb_CajaBancaria.Pista = False
-        Me.cmb_CajaBancaria.Size = New System.Drawing.Size(327, 21)
+        Me.cmb_CajaBancaria.Size = New System.Drawing.Size(336, 21)
         Me.cmb_CajaBancaria.StoredProcedure = "Pro_CajasBancarias_Get"
         Me.cmb_CajaBancaria.Sucursal = True
         Me.cmb_CajaBancaria.TabIndex = 3

@@ -87,32 +87,46 @@ Public Class frm_ReportesDiarios
 
     Private Sub btn_Imprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Imprimir.Click
         SegundosDesconexion = 0
-
-        If Validar() Then
-
+        If Validar(IIf(cmb_CajaBancaria.Text = "CAJA GENERAL BANREGIO- SISSA", False, True)) Then
+            'Si es archivo de deposito
             If cmb_Reporte.SelectedValue = 3 Then
-                'Archivo TXT de Depósitos
-                Dim Arch As New frm_GuardarArchivo
-                Arch.Id_Cia = cmb_cia.SelectedValue
+                If (cmb_CajaBancaria.Text = "CAJA GENERAL BANREGIO- SISSA") Then
+                    Dim Arch As New frm_GuardarArchivo
+                    Dim Dt As DataTable = fn_RemisionesApi(cmb_CajaBancaria.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Grupo.SelectedValue, cmb_Corte.SelectedValue)
+                    Arch.Actualizar(Dt)
+                    Arch.NombreCliente = cmb_CajaBancaria.Text
+                    Arch.Fecha_Aplicacion = dtp_FechaAplicacion.Value
+                    Arch.Id_CajaBancaria = cmb_CajaBancaria.SelectedValue
+                    Arch.Id_Sesion = cmb_Sesiones.SelectedValue
+                    Arch.Corte_Turno = cmb_Corte.SelectedValue
+                    Arch.ShowDialog()
 
-                fn_DepositoClientes_LlenarFichas(Arch.Fichas, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
-                fn_DepositoClientes_LlenarFichasEfectivo(Arch.Fichas_Efectivo, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
-                fn_DepositoClientes_LlenarFichasEfectivoFalso(Arch.Fichas_EfectivoFalso, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
-                fn_DepositoClientes_LlenarCheques(Arch.Cheques, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
-                Dim Dt As DataTable = fn_DepositoClientes_CrearTabla(cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
-                Arch.Actualizar(Dt)
-                Arch.NombreCliente = cmb_CajaBancaria.Text
-                Arch.Fecha_Aplicacion = dtp_FechaAplicacion.Value
-                Arch.Id_CajaBancaria = cmb_CajaBancaria.SelectedValue
-                Arch.Id_Moneda = cmb_Moneda.SelectedValue
-                Arch.Id_Cajero = cmb_Cajero.SelectedValue
-                Arch.Id_GrupoDepo = cmb_Grupo.SelectedValue
-                Arch.Id_Sesion = cmb_Sesiones.SelectedValue
-                Arch.Corte_Turno = cmb_Corte.SelectedValue
+                    Exit Sub
+                Else
+                    'Archivo TXT de Depósitos
+                    Dim Arch As New frm_GuardarArchivo
+                    Arch.Id_Cia = cmb_cia.SelectedValue
 
-                Arch.ShowDialog()
+                    fn_DepositoClientes_LlenarFichas(Arch.Fichas, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
+                    fn_DepositoClientes_LlenarFichasEfectivo(Arch.Fichas_Efectivo, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
+                    fn_DepositoClientes_LlenarFichasEfectivoFalso(Arch.Fichas_EfectivoFalso, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
+                    fn_DepositoClientes_LlenarCheques(Arch.Cheques, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
+                    Dim Dt As DataTable = fn_DepositoClientes_CrearTabla(cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, cmb_cia.SelectedValue)
+                    Arch.Actualizar(Dt)
+                    Arch.NombreCliente = cmb_CajaBancaria.Text
+                    Arch.Fecha_Aplicacion = dtp_FechaAplicacion.Value
+                    Arch.Id_CajaBancaria = cmb_CajaBancaria.SelectedValue
+                    Arch.Id_Moneda = cmb_Moneda.SelectedValue
+                    Arch.Id_Cajero = cmb_Cajero.SelectedValue
+                    Arch.Id_GrupoDepo = cmb_Grupo.SelectedValue
+                    Arch.Id_Sesion = cmb_Sesiones.SelectedValue
+                    Arch.Corte_Turno = cmb_Corte.SelectedValue
 
-                Exit Sub
+                    Arch.ShowDialog()
+
+                    Exit Sub
+                End If
+
             End If
 
             Dim frm As New frm_Reporte
@@ -121,9 +135,9 @@ Public Class frm_ReportesDiarios
             Dim Billetes As New ds_Reportes
             Dim Monedas As New ds_Reportes
 
-            If fn_VerReportes_LlenarHojaTrabjo(Ds.Tbl_HojaTrabajo, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue) And _
-                fn_VerReportes_LlenarHojaTrabjo2(Billetes.Tbl_Denominacion, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, "B") And _
-                fn_VerReportes_LlenarHojaTrabjo2(Monedas.Tbl_Denominacion, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, "M") And _
+            If fn_VerReportes_LlenarHojaTrabjo(Ds.Tbl_HojaTrabajo, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue) And
+                fn_VerReportes_LlenarHojaTrabjo2(Billetes.Tbl_Denominacion, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, "B") And
+                fn_VerReportes_LlenarHojaTrabjo2(Monedas.Tbl_Denominacion, cmb_Moneda.SelectedValue, cmb_CajaBancaria.SelectedValue, cmb_Grupo.SelectedValue, cmb_Sesiones.SelectedValue, cmb_Corte.SelectedValue, cmb_Cajero.SelectedValue, "M") And
                 fn_VerReportes_LlenarLogo(Ds.Tbl_DatosEmpresa) Then
 
                 Select Case cmb_Reporte.SelectedValue
@@ -199,13 +213,13 @@ Public Class frm_ReportesDiarios
         End If
     End Sub
 
-    Private Function Validar() As Boolean
+    Private Function Validar(type As Boolean) As Boolean
         If cmb_Reporte.SelectedValue = "0" Then
             MsgBox("Debe seleccionar un Tipo de Reporte.", MsgBoxStyle.Critical, frm_MENU.Text)
             cmb_Reporte.Focus()
             Return False
         End If
-        If cmb_Moneda.SelectedValue = "0" Then
+        If (type = False AndAlso cmb_Moneda.SelectedValue = "0" And Not cbx_Moneda.Checked) Or (type And cmb_Moneda.SelectedValue = "0") Then
             MsgBox("Debe seleccionar una Moneda.", MsgBoxStyle.Critical, frm_MENU.Text)
             cmb_Moneda.Focus()
             Return False
@@ -235,7 +249,8 @@ Public Class frm_ReportesDiarios
             MsgBox("Debe seleccionar un Cajero.", MsgBoxStyle.Critical, frm_MENU.Text)
             Return False
         End If
-        If cmb_cia.SelectedValue = "0" And cmb_Reporte.SelectedValue = "3" Then
+        If (type = False AndAlso cmb_cia.SelectedValue = "0" And Not cbx_Cia.Checked) Or (type And cmb_cia.SelectedValue = "0") Then
+            'If cmb_cia.SelectedValue = "0" And cmb_Reporte.SelectedValue = "3" And type And Not cbx_Cia.Checked Then
             MsgBox("Debe seleccionar una Compañía de Traslado.", MsgBoxStyle.Critical, frm_MENU.Text)
             cmb_cia.Focus()
             Return False
@@ -270,6 +285,7 @@ Public Class frm_ReportesDiarios
 
         cmb_Grupo.ValorParametro = cmb_CajaBancaria.SelectedValue
         cmb_Grupo.Actualizar()
+        CajaBanregio()
     End Sub
 
     Private Sub dtp_Fecha_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtp_Fecha.ValueChanged
@@ -283,6 +299,7 @@ Public Class frm_ReportesDiarios
 
     Private Sub cmb_Reporte_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmb_Reporte.SelectedValueChanged
         cmb_Moneda.Enabled = cmb_Reporte.SelectedValue > "0"
+        cbx_Moneda.Enabled = cmb_Reporte.SelectedValue > "0"
         cmb_CajaBancaria.Enabled = cmb_Reporte.SelectedValue > "0"
         cmb_Grupo.Enabled = cmb_Reporte.SelectedValue = "1" Or cmb_Reporte.SelectedValue = "3"
         cbx_TProceso.Enabled = cmb_Reporte.SelectedValue = "1" Or cmb_Reporte.SelectedValue = "3"
@@ -294,9 +311,33 @@ Public Class frm_ReportesDiarios
         cmb_Cajero.Enabled = cmb_Reporte.SelectedValue >= "2"
         cbx_TCajero.Enabled = cmb_Reporte.SelectedValue >= "2"
         cmb_cia.Enabled = cmb_Reporte.SelectedValue = "3"
+        cbx_Cia.Enabled = cmb_Reporte.SelectedValue = "3"
         dtp_FechaAplicacion.Enabled = cmb_Reporte.SelectedValue = "3"
-    End Sub
 
+    End Sub
+    Sub CajaBanregio()
+        If (cmb_CajaBancaria.Text = "CAJA GENERAL BANREGIO- SISSA" And cmb_Reporte.SelectedValue = 3) Then
+            'cmb_Moneda.SelectedIndex = 0
+            cbx_TProceso.Checked = True
+            cbx_Todos.Checked = True
+            cbx_TCajero.Checked = True
+            cbx_Moneda.Checked = True
+            cbx_Cia.Checked = True
+            'cmb_cia.SelectedIndex = 0
+            'cmb_Moneda.Enabled = False
+            'cmb_cia.Enabled = False
+        ElseIf (cmb_Reporte.SelectedIndex > 0) Then
+            'cmb_Moneda.SelectedIndex = 0
+            cbx_TProceso.Checked = False
+            cbx_Todos.Checked = False
+            cbx_TCajero.Checked = False
+            cbx_Moneda.Checked = False
+            cbx_Cia.Checked = False
+            'cmb_cia.SelectedIndex = 0
+            'cmb_Moneda.Enabled = True
+            'cmb_cia.Enabled = True
+        End If
+    End Sub
     Private Sub Combo_EnabledChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmb_Moneda.EnabledChanged, cmb_Sesiones.EnabledChanged, cmb_Grupo.EnabledChanged, cmb_Corte.EnabledChanged, cmb_Cajero.EnabledChanged, cmb_CajaBancaria.EnabledChanged
         sender.SelectedValue = "0"
     End Sub
@@ -326,6 +367,24 @@ Public Class frm_ReportesDiarios
     End Sub
 
     Private Sub cmb_Moneda_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmb_Moneda.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmb_CajaBancaria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_CajaBancaria.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cbx_Cia_CheckedChanged(sender As Object, e As EventArgs) Handles cbx_Cia.CheckedChanged
+        If cbx_Cia.Checked Then cmb_cia.SelectedValue = "0"
+        cmb_cia.Enabled = Not cbx_Cia.Checked
+    End Sub
+
+    Private Sub cbx_Moneda_CheckedChanged(sender As Object, e As EventArgs) Handles cbx_Moneda.CheckedChanged
+        If cbx_Moneda.Checked Then cmb_Moneda.SelectedValue = "0"
+        cmb_Moneda.Enabled = Not cbx_Moneda.Checked
+    End Sub
+
+    Private Sub cmb_Reporte_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

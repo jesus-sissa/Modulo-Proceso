@@ -1,5 +1,8 @@
 ﻿Imports Modulo_Proceso.Cn_Proceso
 Imports CrystalDecisions.CrystalReports.Engine
+Imports Api_Bank
+Imports Newtonsoft.Json
+Imports Modulo_Proceso.Cn_Datos
 
 Public Class frm_GuardarArchivo
     Public Id_Cia As Integer
@@ -45,27 +48,63 @@ Public Class frm_GuardarArchivo
             MsgBox("No existen Depósitos.", MsgBoxStyle.Critical, frm_MENU.Text)
             Exit Sub
         End If
+
         If lsv_Servicios.CheckedItems.Count = 0 Then
             MsgBox("No ha seleccionado ningún Depósito.", MsgBoxStyle.Critical, frm_MENU.Text)
             Exit Sub
         End If
 
-        Dim row As DataRow = fn_GuardarArchivo_ObtenNombre(Id_CajaBancaria, Fecha_Aplicacion, Id_Cia)
-
-        Exit Sub
-        If row("Tipo_Archivo") = "AFIRME" Then
-            Call Archivo_AFIRME(row)
-        ElseIf row("Tipo_Archivo") = "BANORTE" Then
-            Call Archivo_Banorte(row)
-        ElseIf row("Tipo_Archivo") = "SANTANDER" Then
-            Call Archivo_SANTANDER(row)
-        ElseIf row("Tipo_Archivo") = "BAJIO" Then
-            Call Archivo_BAJIO(row)
+        If (NombreCliente <> "CAJA GENERAL BANREGIO- SISSA") Then
+            Dim row As DataRow = fn_GuardarArchivo_ObtenNombre(Id_CajaBancaria, Fecha_Aplicacion, Id_Cia)
+            If row("Tipo_Archivo") = "AFIRME" Then
+                Call Archivo_AFIRME(row)
+            ElseIf row("Tipo_Archivo") = "BANORTE" Then
+                Call Archivo_Banorte(row)
+            ElseIf row("Tipo_Archivo") = "SANTANDER" Then
+                Call Archivo_SANTANDER(row)
+            ElseIf row("Tipo_Archivo") = "BAJIO" Then
+                Call Archivo_BAJIO(row)
+            ElseIf row("Tipo_Archivo") = "BAJIO" Then
+                Call Archivo_BAJIO(row)
+            Else
+                Call Archivo_OTROS(row)
+            End If
         Else
-            Call Archivo_OTROS(row)
+            Archivo_Banregio()
         End If
-       
 
+
+        'Exit Sub
+
+
+
+    End Sub
+    Sub Archivo_Banregio()
+        Dim _Archivo As New Bank
+        Dim _Banregio As New BanregioApi
+        Dim _Cuentas As DataTable
+        Dim _Depositos As DataTable
+        Dim _FichasTipos As DataTable
+        Dim _EfectivoDesglose As DataTable
+        Dim _Cheques As DataTable
+        Dim Id_Servicios As String = String.Empty
+        For i As Integer = 0 To lsv_Servicios.CheckedItems.Count - 1
+            Id_Servicios += lsv_Servicios.Items(i).Tag
+            If (lsv_Servicios.CheckedItems.Count - 1) > 0 Then
+                If i < lsv_Servicios.CheckedItems.Count - 1 Then
+                    Id_Servicios += ","
+                End If
+            End If
+
+        Next
+
+
+        _Cuentas = fn_ProCuentasApi(Id_Sesion, Id_CajaBancaria, Id_Servicios)
+        _Depositos = fn_Pro_DepositosApi(Id_Sesion, Id_Servicios)
+        _EfectivoDesglose = fn_EfectivoDesglose(Id_Sesion, Id_CajaBancaria, Id_Servicios)
+        _Cheques = fn_Cheques(Id_Sesion, Id_CajaBancaria, Id_Servicios)
+        'Dim JsonStrin = JsonConvert.SerializeObject(s.GeneraJson(_Cuentas, _Depositos, _FichasTipos, _EfectivoDesglose, _Cheques))
+        _Banregio.SaveRepositoryFile(Crea_ConexionSTD(), _Cuentas, _Depositos, _EfectivoDesglose, _Cheques, Id_Sesion, Id_CajaBancaria, Corte_Turno, Fecha_Aplicacion, UsuarioId)
     End Sub
 
     Private Sub Archivo_OTROS(ByVal Row As DataRow)
@@ -134,16 +173,16 @@ Public Class frm_GuardarArchivo
             FileOpen(2, Nombre_ArchivoC, OpenMode.Output)
             Etapa = 3
 
-            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Where i.Checked = True _
+            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Where i.Checked = True
                      Select f
 
 
-            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha _
-                     Where i.Checked = True _
+            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha
+                     Where i.Checked = True
                      Select c
 
             'En otros bancos el Orden sigue siendo como estaba antes
@@ -229,12 +268,12 @@ Public Class frm_GuardarArchivo
                 ArchivoD = FuncionesGlobales.ReadFile(Nombre_ArchivoD)
                 ArchivoC = FuncionesGlobales.ReadFile(Nombre_ArchivoC)
 
-                Dim De = From d In qd _
-                                   Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                                   Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                                   Select Id_Denominacion, _
-                                   Denominacion, _
-                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                Dim De = From d In qd
+                         Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha
+                         Group fe By fe.Id_Denominacion, fe.Denominacion Into Group
+                         Select Id_Denominacion,
+                                   Denominacion,
+                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                                    Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
                 NombreCorto_ArchivoD = System.IO.Path.GetFileName(Nombre_ArchivoD)
@@ -331,15 +370,15 @@ Public Class frm_GuardarArchivo
             FileOpen(2, Nombre_ArchivoC, OpenMode.Output)
             Etapa = 3
 
-            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Where i.Checked = True _
+            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Where i.Checked = True
                      Select f
 
-            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha _
-                     Where i.Checked = True _
+            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha
+                     Where i.Checked = True
                      Select c
 
             'En Banorte cambiaron el orden de los campos y agregaron uno nuevo (CR)
@@ -441,12 +480,12 @@ Public Class frm_GuardarArchivo
 
 
 
-                Dim De = From d In qd _
-                                   Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                                   Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                                   Select Id_Denominacion, _
-                                   Denominacion, _
-                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                Dim De = From d In qd
+                         Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha
+                         Group fe By fe.Id_Denominacion, fe.Denominacion Into Group
+                         Select Id_Denominacion,
+                                   Denominacion,
+                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                                    Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
                 NombreCorto_ArchivoD = System.IO.Path.GetFileName(Nombre_ArchivoD)
@@ -561,16 +600,16 @@ Public Class frm_GuardarArchivo
             Etapa = 3
 
 
-            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Where i.Checked = True _
+            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Where i.Checked = True
                      Select f
 
 
-            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha _
-                     Where i.Checked = True _
+            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha
+                     Where i.Checked = True
                      Select c
 
             'T,AAAAMMDD,XX,RR,MM,SSS,PP
@@ -658,12 +697,12 @@ Public Class frm_GuardarArchivo
                 ArchivoD = FuncionesGlobales.ReadFile(Nombre_ArchivoD)
                 ArchivoC = FuncionesGlobales.ReadFile(Nombre_ArchivoC)
 
-                Dim De = From d In qd _
-                                   Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                                   Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                                   Select Id_Denominacion, _
-                                   Denominacion, _
-                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                Dim De = From d In qd
+                         Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha
+                         Group fe By fe.Id_Denominacion, fe.Denominacion Into Group
+                         Select Id_Denominacion,
+                                   Denominacion,
+                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                                    Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
                 NombreCorto_ArchivoD = System.IO.Path.GetFileName(Nombre_ArchivoD)
@@ -787,16 +826,16 @@ Public Class frm_GuardarArchivo
             '        Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
             '        Where i.Checked = True And f.IEfectivo > 0 _
             '        Select f
-            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                    Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                    Where i.Checked = True _
-                    Select f
+            Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Where i.Checked = True
+                     Select f
 
             'Consulta para Generar Cheques
-            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha _
-                     Where i.Checked = True _
+            Dim qc = From i As ListViewItem In lsv_Servicios.CheckedItems
+                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha
+                     Where i.Checked = True
                      Select c
 
             LineC &= "C,"
@@ -986,12 +1025,12 @@ Diferencia:
                 ArchivoD = FuncionesGlobales.ReadFile(Nombre_ArchivoD)
                 ArchivoC = FuncionesGlobales.ReadFile(Nombre_ArchivoC)
 
-                Dim De = From d In qd _
-                        Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                       Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                       Select Id_Denominacion, _
-                       Denominacion, _
-                       Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                Dim De = From d In qd
+                         Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha
+                         Group fe By fe.Id_Denominacion, fe.Denominacion Into Group
+                         Select Id_Denominacion,
+                       Denominacion,
+                       Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                        Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
                 NombreCorto_ArchivoD = System.IO.Path.GetFileName(Nombre_ArchivoD)
@@ -1101,14 +1140,14 @@ Diferencia:
             FileOpen(1, Nombre_ArchivoD, OpenMode.Output)
             Etapa = 3
 
-            Dim ListaFichas = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                     Where i.Checked = True _
-                     Select f Order By f.Id_Servicio, f.Id_Ficha
+            Dim ListaFichas = From i As ListViewItem In lsv_Servicios.CheckedItems
+                              Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                              Where i.Checked = True
+                              Select f Order By f.Id_Servicio, f.Id_Ficha
 
-                'ENCABEZADO
-                'Orden= DEP, NumeroProv, aaaammdd, NumeroArchivo, CantidadDepositosPesos, ImportePesos, CantidadDepositosDolares, ImporteDolares
-                'La cabecera se generará hasta el final porque no se sabe cuantas filas serán (ya que puede haber diferencias)
+            'ENCABEZADO
+            'Orden= DEP, NumeroProv, aaaammdd, NumeroArchivo, CantidadDepositosPesos, ImportePesos, CantidadDepositosDolares, ImporteDolares
+            'La cabecera se generará hasta el final porque no se sabe cuantas filas serán (ya que puede haber diferencias)
             Cabecera &= "DEP,"
             Cabecera &= Trim(Clave_ProveedorArchivo) & ","
             Cabecera &= Format(Row("Fecha"), "yyyyMMdd") & ","
@@ -1119,12 +1158,12 @@ Diferencia:
             ImportePesosSTR = Replace(ImportePesosSTR, ".", "")
             Cabecera &= FuncionesGlobales.fn_PonerCeros(ImportePesosSTR, 11) & ","
             Cabecera &= "0000,00000000000"
-                'WriteLine(1, Line.ToCharArray)
+            'WriteLine(1, Line.ToCharArray)
 
-                'EN BANJIO ES UNA FILA POR CADA FICHA PERO SOLO LA PRIMERA LLEVA EL DESGLOSE (LA SUMA DE TODAS)
-                'LAS DEMAS NO LLEVAN DESGLOSE
+            'EN BANJIO ES UNA FILA POR CADA FICHA PERO SOLO LA PRIMERA LLEVA EL DESGLOSE (LA SUMA DE TODAS)
+            'LAS DEMAS NO LLEVAN DESGLOSE
 
-                'Armar las Filas de las Fichas y Cheques segun sea el caso
+            'Armar las Filas de las Fichas y Cheques segun sea el caso
             Fila = 0
             For Each ficha As ds_Reportes.Tbl_FichasRow In ListaFichas
                 Line = ""
@@ -1137,24 +1176,24 @@ Diferencia:
 
                     Line &= FuncionesGlobales.fn_PonerCeros(Fila.ToString, 4) & ","
                     Line &= "D,"
-                        'Cuenta
+                    'Cuenta
                     Line &= FuncionesGlobales.fn_PonerCeros(.Cuenta, 12) & ","
-                        'Remision
+                    'Remision
                     Line &= FuncionesGlobales.fn_PonerCeros(.Remision, 11) & ","
-                        'Referencia
+                    'Referencia
                     Line &= FuncionesGlobales.fn_PonerEspaciosDer(.Referencia, Longitud_Referencia) & ","
-                        'Numero de Plaza
+                    'Numero de Plaza
                     Line &= Numero_Plaza & "," 'Sucursal donde fué realizado el proceso de verificacion
-                        'Divisa
+                    'Divisa
                     Line &= Microsoft.VisualBasic.Right(.Divisa, 2) & ","
-                        'Dice Contener
+                    'Dice Contener
                     DiceContenerSTR = Format(.DiceContener, "#0.00")
                     DiceContenerSTR = Replace(DiceContenerSTR, ".", "")
                     Line &= FuncionesGlobales.fn_PonerCeros(DiceContenerSTR, 11) & ","
 
 
                     If Id_ServicioActual = ficha.Id_Servicio Then
-                            'Contiene
+                        'Contiene
                         Line &= FuncionesGlobales.fn_PonerCeros("0", 11) & ","
                         Line &= ","
                         Line &= ","
@@ -1183,59 +1222,59 @@ Diferencia:
                         Line &= ","
 
                         Dim Id_Ficha As Integer = .Id_Ficha
-                            'Antes se desplegaba el desglose por cada ficha
-                            'Dim Query As System.Collections.Generic.IEnumerable(Of ds_Reportes.Tbl_FichasEfectivoRow) = From d In Fichas_Efectivo.ToList Where d.Id_Ficha = Id_Ficha Select d
-                            'Ahora debe ser el desglose de todas las fichas sumado y desplegado solo en la primera ficha
-                        Dim Desglose = From d In ListaFichas _
-                                    Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                                    Where (d.Id_Servicio = CDec(Id_ServicioActual)) _
-                                    Group fe By fe.Presentacion, fe.Id_Denominacion, fe.Denominacion Into Group _
-                                    Select Presentacion, Id_Denominacion, Denominacion, _
-                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                        'Antes se desplegaba el desglose por cada ficha
+                        'Dim Query As System.Collections.Generic.IEnumerable(Of ds_Reportes.Tbl_FichasEfectivoRow) = From d In Fichas_Efectivo.ToList Where d.Id_Ficha = Id_Ficha Select d
+                        'Ahora debe ser el desglose de todas las fichas sumado y desplegado solo en la primera ficha
+                        Dim Desglose = From d In ListaFichas
+                                       Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha
+                                       Where (d.Id_Servicio = CDec(Id_ServicioActual))
+                                       Group fe By fe.Presentacion, fe.Id_Denominacion, fe.Denominacion Into Group
+                                       Select Presentacion, Id_Denominacion, Denominacion,
+                                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                                    Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
-                            'Where (d.Id_Servicio = CDec(Id_ServicioActual)) _
+                        'Where (d.Id_Servicio = CDec(Id_ServicioActual)) _
 
 
-                            'Dim De = From d In ListaFichas _
-                            '           Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                            '           Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                            '           Select Id_Denominacion, _
-                            '           Denominacion, _
-                            '           Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
-                            '           Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
+                        'Dim De = From d In ListaFichas _
+                        '           Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
+                        '           Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
+                        '           Select Id_Denominacion, _
+                        '           Denominacion, _
+                        '           Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                        '           Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
 
                         Dim Encontrado As Boolean = False
-                            'Billetes
+                        'Billetes
                         For Each Dr_Fila As DataRow In Dt_DenominacionesB.Rows
                             Encontrado = False
-                                'As ds_Reportes.Tbl_FichasEfectivoRow
+                            'As ds_Reportes.Tbl_FichasEfectivoRow
                             For Each Den In Desglose
                                 If CDec(Dr_Fila("Denominacion")) = CDec(Den.Denominacion) And Den.Presentacion = "B" Then
                                     Line &= Den.Cantidad & ","
                                     Encontrado = True
                                     Exit For
-                                    End If
+                                End If
                             Next
                             If Not Encontrado Then Line &= "0,"
                         Next Dr_Fila
-                            'Monedas
+                        'Monedas
                         For Each Dr_FilaM As DataRow In Dt_DenominacionesM.Rows
                             Encontrado = False
-                                'As ds_Reportes.Tbl_FichasEfectivoRow
+                            'As ds_Reportes.Tbl_FichasEfectivoRow
                             For Each Den In Desglose
                                 If CDec(Dr_FilaM("Denominacion")) = CDec(Den.Denominacion) And Den.Presentacion = "M" Then
                                     Line &= Den.Cantidad & ","
                                     Encontrado = True
                                     Exit For
-                                    End If
+                                End If
                             Next
                             If Not Encontrado Then Line &= "0,"
                         Next Dr_FilaM
 
                         Line = Microsoft.VisualBasic.Left(Line, Len(Line) - 1)
-                        End If
+                    End If
 
                     WriteLine(1, Line.ToCharArray)
 
@@ -1248,7 +1287,7 @@ Diferencia:
                         Else
                             Line &= "F,"
                             ImporteDiferencia = (.DEfectivo * -1)
-                            End If
+                        End If
                         Line &= FuncionesGlobales.fn_PonerCeros(.Cuenta, 12) & ","
                         Line &= FuncionesGlobales.fn_PonerCeros(.Remision, 11) & ","
                         Line &= FuncionesGlobales.fn_PonerEspaciosDer(.Referencia, Longitud_Referencia) & ","
@@ -1270,15 +1309,15 @@ Diferencia:
 
                         ExisteDiferencia = False
                         ImporteDiferencia = 0
-                        End If
-                    End With
+                    End If
+                End With
             Next
 
             FileClose(1)
 
-                'Hasta aqui el archivo se ha creado pero sin la cabecera
-                'Se lee el contenido del archivo, se inserta la cabecera y luego se inserta el contenido
-                'para que quede el archivo listo para enviar
+            'Hasta aqui el archivo se ha creado pero sin la cabecera
+            'Se lee el contenido del archivo, se inserta la cabecera y luego se inserta el contenido
+            'para que quede el archivo listo para enviar
 
             Dim Contenido As String = ""
             Contenido = My.Computer.FileSystem.ReadAllText(Nombre_ArchivoD) 'LEEO TODO EL ARCHIVO Y LO ALMACENO EN LA VARIABLE
@@ -1295,15 +1334,15 @@ Diferencia:
                 Dim ArchivoD As Byte()
                 Dim ArchivoC As Byte()
 
-                    'Convert File to bytes Array
+                'Convert File to bytes Array
                 ArchivoD = FuncionesGlobales.ReadFile(Nombre_ArchivoD)
 
-                Dim De = From d In ListaFichas _
-                   Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha _
-                   Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                   Select Id_Denominacion, _
-                   Denominacion, _
-                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+                Dim De = From d In ListaFichas
+                         Join fe In Fichas_Efectivo.ToList On d.Id_Ficha Equals fe.Id_Ficha
+                         Group fe By fe.Id_Denominacion, fe.Denominacion Into Group
+                         Select Id_Denominacion,
+                   Denominacion,
+                   Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                    Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
                 NombreCorto_ArchivoD = System.IO.Path.GetFileName(Nombre_ArchivoD)
@@ -1318,10 +1357,10 @@ Diferencia:
                     lsv_Servicios.Items.Clear()
                     btn_Guardar.Enabled = False
                     btn_GuardarXficha.Enabled = False
-                    End If
+                End If
             Else
                 MsgBox("No se ha efectuado ningún cambio.", MsgBoxStyle.Information, frm_MENU.Text)
-                End If
+            End If
         Catch ex As Exception
             If Etapa = 2 Then
                 FileClose(1)
@@ -1406,10 +1445,10 @@ Diferencia:
 
         Dim Query As System.Collections.Generic.IEnumerable(Of ds_Reportes.Tbl_FichasEfectivoRow)
 
-        Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems _
-                                     Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio) _
-                                     Where i.Checked = True _
-                                     Select f
+        Dim qd = From i As ListViewItem In lsv_Servicios.CheckedItems
+                 Join f In Fichas On CDec(i.Tag) Equals (f.Id_Servicio)
+                 Where i.Checked = True
+                 Select f
 
         If MsgBox("Se generará un Archivo de D y un Archivo C por cada Ficha de Depósito. En total " & (qd.Count * 2).ToString & " Archivos. Desea Continuar?", MsgBoxStyle.YesNo + MsgBoxStyle.Question, frm_MENU.Text) <> MsgBoxResult.Yes Then
             qd = Nothing
@@ -1458,10 +1497,10 @@ Diferencia:
             Id_Archivo = 0
 
             'Obtener los Cheques
-            Dim qc = From f In Fichas _
-                 Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha _
-                 Where f.Id_Ficha = Id_Ficha _
-                 Select c
+            Dim qc = From f In Fichas
+                     Join c In Cheques On c.Id_Ficha Equals f.Id_Ficha
+                     Where f.Id_Ficha = Id_Ficha
+                     Select c
 
             'Armar el Nombre del Archivo
             NombreArchivo = Path & "\D" & CR & Numero_Plaza & Trim(ClaveCia) & Fecha & "_" & Numero & ".txt"
@@ -1564,12 +1603,12 @@ Diferencia:
             ArchivoC = FuncionesGlobales.ReadFile(NombreArchivoC)
 
             'Consultar las Denominaciones Agrupadas para Pro_ArchivosD
-            Dim De = From fe In Fichas_Efectivo.ToList _
-                           Where fe.Id_Ficha = Id_Ficha _
-                           Group fe By fe.Id_Denominacion, fe.Denominacion Into Group _
-                           Select Id_Denominacion, _
-                           Denominacion, _
-                           Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad), _
+            Dim De = From fe In Fichas_Efectivo.ToList
+                     Where fe.Id_Ficha = Id_Ficha
+                     Group fe By fe.Id_Denominacion, fe.Denominacion Into Group
+                     Select Id_Denominacion,
+                           Denominacion,
+                           Cantidad = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Cantidad),
                            Importe = Group.Sum(Function(f As ds_Reportes.Tbl_FichasEfectivoRow) f.Importe)
 
             'Guardar el Archivo
@@ -1595,7 +1634,7 @@ Diferencia:
         lsv_Servicios.Items.Clear()
         btn_Guardar.Enabled = False
         btn_GuardarXficha.Enabled = False
-        
+
 
     End Sub
 

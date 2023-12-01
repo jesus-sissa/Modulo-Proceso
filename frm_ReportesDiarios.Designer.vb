@@ -23,35 +23,37 @@ Partial Class frm_ReportesDiarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_ReportesDiarios))
-        Me.cbx_Todos = New System.Windows.Forms.CheckBox
-        Me.btn_Cerrar = New System.Windows.Forms.Button
-        Me.btn_Imprimir = New System.Windows.Forms.Button
-        Me.lbl_Sesion = New System.Windows.Forms.Label
-        Me.lbl_Fecha = New System.Windows.Forms.Label
-        Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker
-        Me.lbl_Corte = New System.Windows.Forms.Label
-        Me.lbl_Grupo = New System.Windows.Forms.Label
-        Me.lbl_Moneda = New System.Windows.Forms.Label
-        Me.lbl_Reporte = New System.Windows.Forms.Label
-        Me.lbl_Cajero = New System.Windows.Forms.Label
-        Me.lbl_CajaBancaria = New System.Windows.Forms.Label
-        Me.lbl_Cia = New System.Windows.Forms.Label
-        Me.cbx_TCajero = New System.Windows.Forms.CheckBox
-        Me.cbx_TProceso = New System.Windows.Forms.CheckBox
-        Me.gbx_Filtro = New System.Windows.Forms.GroupBox
-        Me.lbl_DiaSemana = New System.Windows.Forms.Label
-        Me.lbl_FechaAplicacion = New System.Windows.Forms.Label
-        Me.dtp_FechaAplicacion = New System.Windows.Forms.DateTimePicker
-        Me.Gbx_Botones = New System.Windows.Forms.GroupBox
-        Me.cmb_cia = New Modulo_Proceso.cp_cmb_Simple
-        Me.cmb_CajaBancaria = New Modulo_Proceso.cp_cmb_SimpleFiltrado
-        Me.cmb_Cajero = New Modulo_Proceso.cp_cmb_SimpleFiltradoParam
-        Me.tbx_ClaveCajero = New Modulo_Proceso.cp_Textbox
-        Me.cmb_Reporte = New Modulo_Proceso.cp_cmb_Manual
-        Me.cmb_Sesiones = New Modulo_Proceso.cp_cmb_Parametro
-        Me.cmb_Corte = New Modulo_Proceso.cp_cmb_SimpleParametros
-        Me.cmb_Grupo = New Modulo_Proceso.cp_cmb_Parametro
-        Me.cmb_Moneda = New Modulo_Proceso.cp_cmb_Simple
+        Me.cbx_Todos = New System.Windows.Forms.CheckBox()
+        Me.btn_Cerrar = New System.Windows.Forms.Button()
+        Me.btn_Imprimir = New System.Windows.Forms.Button()
+        Me.lbl_Sesion = New System.Windows.Forms.Label()
+        Me.lbl_Fecha = New System.Windows.Forms.Label()
+        Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_Corte = New System.Windows.Forms.Label()
+        Me.lbl_Grupo = New System.Windows.Forms.Label()
+        Me.lbl_Moneda = New System.Windows.Forms.Label()
+        Me.lbl_Reporte = New System.Windows.Forms.Label()
+        Me.lbl_Cajero = New System.Windows.Forms.Label()
+        Me.lbl_CajaBancaria = New System.Windows.Forms.Label()
+        Me.lbl_Cia = New System.Windows.Forms.Label()
+        Me.cbx_TCajero = New System.Windows.Forms.CheckBox()
+        Me.cbx_TProceso = New System.Windows.Forms.CheckBox()
+        Me.gbx_Filtro = New System.Windows.Forms.GroupBox()
+        Me.lbl_DiaSemana = New System.Windows.Forms.Label()
+        Me.lbl_FechaAplicacion = New System.Windows.Forms.Label()
+        Me.dtp_FechaAplicacion = New System.Windows.Forms.DateTimePicker()
+        Me.Gbx_Botones = New System.Windows.Forms.GroupBox()
+        Me.cmb_cia = New Modulo_Proceso.cp_cmb_Simple()
+        Me.cmb_CajaBancaria = New Modulo_Proceso.cp_cmb_SimpleFiltrado()
+        Me.cmb_Cajero = New Modulo_Proceso.cp_cmb_SimpleFiltradoParam()
+        Me.tbx_ClaveCajero = New Modulo_Proceso.cp_Textbox()
+        Me.cmb_Reporte = New Modulo_Proceso.cp_cmb_Manual()
+        Me.cmb_Sesiones = New Modulo_Proceso.cp_cmb_Parametro()
+        Me.cmb_Corte = New Modulo_Proceso.cp_cmb_SimpleParametros()
+        Me.cmb_Grupo = New Modulo_Proceso.cp_cmb_Parametro()
+        Me.cmb_Moneda = New Modulo_Proceso.cp_cmb_Simple()
+        Me.cbx_Cia = New System.Windows.Forms.CheckBox()
+        Me.cbx_Moneda = New System.Windows.Forms.CheckBox()
         Me.gbx_Filtro.SuspendLayout()
         Me.Gbx_Botones.SuspendLayout()
         Me.SuspendLayout()
@@ -60,7 +62,7 @@ Partial Class frm_ReportesDiarios
         '
         Me.cbx_Todos.AutoSize = True
         Me.cbx_Todos.Enabled = False
-        Me.cbx_Todos.Location = New System.Drawing.Point(200, 153)
+        Me.cbx_Todos.Location = New System.Drawing.Point(238, 153)
         Me.cbx_Todos.Name = "cbx_Todos"
         Me.cbx_Todos.Size = New System.Drawing.Size(56, 17)
         Me.cbx_Todos.TabIndex = 16
@@ -94,7 +96,7 @@ Partial Class frm_ReportesDiarios
         '
         'lbl_Sesion
         '
-        Me.lbl_Sesion.Location = New System.Drawing.Point(203, 128)
+        Me.lbl_Sesion.Location = New System.Drawing.Point(255, 128)
         Me.lbl_Sesion.Name = "lbl_Sesion"
         Me.lbl_Sesion.Size = New System.Drawing.Size(39, 13)
         Me.lbl_Sesion.TabIndex = 12
@@ -115,7 +117,7 @@ Partial Class frm_ReportesDiarios
         Me.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_Fecha.Location = New System.Drawing.Point(102, 124)
         Me.dtp_Fecha.Name = "dtp_Fecha"
-        Me.dtp_Fecha.Size = New System.Drawing.Size(95, 20)
+        Me.dtp_Fecha.Size = New System.Drawing.Size(130, 20)
         Me.dtp_Fecha.TabIndex = 11
         '
         'lbl_Corte
@@ -139,7 +141,7 @@ Partial Class frm_ReportesDiarios
         'lbl_Moneda
         '
         Me.lbl_Moneda.AutoSize = True
-        Me.lbl_Moneda.Location = New System.Drawing.Point(47, 46)
+        Me.lbl_Moneda.Location = New System.Drawing.Point(47, 73)
         Me.lbl_Moneda.Name = "lbl_Moneda"
         Me.lbl_Moneda.Size = New System.Drawing.Size(46, 13)
         Me.lbl_Moneda.TabIndex = 2
@@ -166,7 +168,7 @@ Partial Class frm_ReportesDiarios
         'lbl_CajaBancaria
         '
         Me.lbl_CajaBancaria.AutoSize = True
-        Me.lbl_CajaBancaria.Location = New System.Drawing.Point(20, 74)
+        Me.lbl_CajaBancaria.Location = New System.Drawing.Point(20, 46)
         Me.lbl_CajaBancaria.Name = "lbl_CajaBancaria"
         Me.lbl_CajaBancaria.Size = New System.Drawing.Size(73, 13)
         Me.lbl_CajaBancaria.TabIndex = 4
@@ -185,7 +187,7 @@ Partial Class frm_ReportesDiarios
         '
         Me.cbx_TCajero.AutoSize = True
         Me.cbx_TCajero.Enabled = False
-        Me.cbx_TCajero.Location = New System.Drawing.Point(478, 179)
+        Me.cbx_TCajero.Location = New System.Drawing.Point(446, 180)
         Me.cbx_TCajero.Name = "cbx_TCajero"
         Me.cbx_TCajero.Size = New System.Drawing.Size(56, 17)
         Me.cbx_TCajero.TabIndex = 20
@@ -196,7 +198,7 @@ Partial Class frm_ReportesDiarios
         '
         Me.cbx_TProceso.AutoSize = True
         Me.cbx_TProceso.Enabled = False
-        Me.cbx_TProceso.Location = New System.Drawing.Point(380, 99)
+        Me.cbx_TProceso.Location = New System.Drawing.Point(446, 100)
         Me.cbx_TProceso.Name = "cbx_TProceso"
         Me.cbx_TProceso.Size = New System.Drawing.Size(56, 17)
         Me.cbx_TProceso.TabIndex = 9
@@ -205,6 +207,8 @@ Partial Class frm_ReportesDiarios
         '
         'gbx_Filtro
         '
+        Me.gbx_Filtro.Controls.Add(Me.cbx_Moneda)
+        Me.gbx_Filtro.Controls.Add(Me.cbx_Cia)
         Me.gbx_Filtro.Controls.Add(Me.cmb_cia)
         Me.gbx_Filtro.Controls.Add(Me.lbl_Cia)
         Me.gbx_Filtro.Controls.Add(Me.lbl_CajaBancaria)
@@ -285,7 +289,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_cia.MaxDropDownItems = 20
         Me.cmb_cia.Name = "cmb_cia"
         Me.cmb_cia.Pista = True
-        Me.cmb_cia.Size = New System.Drawing.Size(428, 21)
+        Me.cmb_cia.Size = New System.Drawing.Size(334, 21)
         Me.cmb_cia.StoredProcedure = "Cat_Cias_Get"
         Me.cmb_cia.Sucursal = False
         Me.cmb_cia.TabIndex = 22
@@ -301,7 +305,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_CajaBancaria.Enabled = False
         Me.cmb_CajaBancaria.Filtro = Nothing
         Me.cmb_CajaBancaria.FormattingEnabled = True
-        Me.cmb_CajaBancaria.Location = New System.Drawing.Point(102, 70)
+        Me.cmb_CajaBancaria.Location = New System.Drawing.Point(102, 43)
         Me.cmb_CajaBancaria.MaxDropDownItems = 20
         Me.cmb_CajaBancaria.Name = "cmb_CajaBancaria"
         Me.cmb_CajaBancaria.NombreParametro = Nothing
@@ -309,7 +313,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_CajaBancaria.Size = New System.Drawing.Size(400, 21)
         Me.cmb_CajaBancaria.StoredProcedure = "Pro_CajasBancarias_ComboGet"
         Me.cmb_CajaBancaria.Sucursal = True
-        Me.cmb_CajaBancaria.TabIndex = 6
+        Me.cmb_CajaBancaria.TabIndex = 3
         Me.cmb_CajaBancaria.Tipo = 0
         Me.cmb_CajaBancaria.Tipodedatos = System.Data.SqlDbType.BigInt
         Me.cmb_CajaBancaria.ValorParametro = Nothing
@@ -330,7 +334,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_Cajero.MaxDropDownItems = 20
         Me.cmb_Cajero.Name = "cmb_Cajero"
         Me.cmb_Cajero.Pista = False
-        Me.cmb_Cajero.Size = New System.Drawing.Size(370, 21)
+        Me.cmb_Cajero.Size = New System.Drawing.Size(334, 21)
         Me.cmb_Cajero.StoredProcedure = "Cat_EmpleadosVerfica_Get"
         Me.cmb_Cajero.Sucursal = True
         Me.cmb_Cajero.TabIndex = 19
@@ -359,7 +363,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_Reporte.Location = New System.Drawing.Point(102, 17)
         Me.cmb_Reporte.MaxDropDownItems = 20
         Me.cmb_Reporte.Name = "cmb_Reporte"
-        Me.cmb_Reporte.Size = New System.Drawing.Size(334, 21)
+        Me.cmb_Reporte.Size = New System.Drawing.Size(400, 21)
         Me.cmb_Reporte.TabIndex = 1
         Me.cmb_Reporte.ValueMember = "value"
         '
@@ -372,7 +376,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_Sesiones.Empresa = False
         Me.cmb_Sesiones.Enabled = False
         Me.cmb_Sesiones.FormattingEnabled = True
-        Me.cmb_Sesiones.Location = New System.Drawing.Point(248, 125)
+        Me.cmb_Sesiones.Location = New System.Drawing.Point(304, 127)
         Me.cmb_Sesiones.MaxDropDownItems = 20
         Me.cmb_Sesiones.Name = "cmb_Sesiones"
         Me.cmb_Sesiones.NombreParametro = "@Fecha"
@@ -397,7 +401,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_Corte.MaxDropDownItems = 20
         Me.cmb_Corte.Name = "cmb_Corte"
         Me.cmb_Corte.Pista = False
-        Me.cmb_Corte.Size = New System.Drawing.Size(89, 21)
+        Me.cmb_Corte.Size = New System.Drawing.Size(130, 21)
         Me.cmb_Corte.StoredProcedure = "Pro_Cortes_Get"
         Me.cmb_Corte.Sucursal = False
         Me.cmb_Corte.TabIndex = 15
@@ -417,7 +421,7 @@ Partial Class frm_ReportesDiarios
         Me.cmb_Grupo.Name = "cmb_Grupo"
         Me.cmb_Grupo.NombreParametro = "@Id_CajaBancaria"
         Me.cmb_Grupo.Pista = True
-        Me.cmb_Grupo.Size = New System.Drawing.Size(272, 21)
+        Me.cmb_Grupo.Size = New System.Drawing.Size(334, 21)
         Me.cmb_Grupo.StoredProcedure = "Cat_GrupoDeposito_Get"
         Me.cmb_Grupo.Sucursal = False
         Me.cmb_Grupo.TabIndex = 8
@@ -433,21 +437,43 @@ Partial Class frm_ReportesDiarios
         Me.cmb_Moneda.Empresa = False
         Me.cmb_Moneda.Enabled = False
         Me.cmb_Moneda.FormattingEnabled = True
-        Me.cmb_Moneda.Location = New System.Drawing.Point(102, 43)
+        Me.cmb_Moneda.Location = New System.Drawing.Point(102, 70)
         Me.cmb_Moneda.MaxDropDownItems = 20
         Me.cmb_Moneda.Name = "cmb_Moneda"
         Me.cmb_Moneda.Pista = True
-        Me.cmb_Moneda.Size = New System.Drawing.Size(272, 21)
+        Me.cmb_Moneda.Size = New System.Drawing.Size(130, 21)
         Me.cmb_Moneda.StoredProcedure = "Cat_Monedas_Get"
         Me.cmb_Moneda.Sucursal = True
-        Me.cmb_Moneda.TabIndex = 3
+        Me.cmb_Moneda.TabIndex = 6
         Me.cmb_Moneda.ValueMember = "Id_Moneda"
+        '
+        'cbx_Cia
+        '
+        Me.cbx_Cia.AutoSize = True
+        Me.cbx_Cia.Enabled = False
+        Me.cbx_Cia.Location = New System.Drawing.Point(446, 208)
+        Me.cbx_Cia.Name = "cbx_Cia"
+        Me.cbx_Cia.Size = New System.Drawing.Size(56, 17)
+        Me.cbx_Cia.TabIndex = 25
+        Me.cbx_Cia.Text = "Todos"
+        Me.cbx_Cia.UseVisualStyleBackColor = True
+        '
+        'cbx_Moneda
+        '
+        Me.cbx_Moneda.AutoSize = True
+        Me.cbx_Moneda.Enabled = False
+        Me.cbx_Moneda.Location = New System.Drawing.Point(238, 72)
+        Me.cbx_Moneda.Name = "cbx_Moneda"
+        Me.cbx_Moneda.Size = New System.Drawing.Size(56, 17)
+        Me.cbx_Moneda.TabIndex = 26
+        Me.cbx_Moneda.Text = "Todos"
+        Me.cbx_Moneda.UseVisualStyleBackColor = True
         '
         'frm_ReportesDiarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(614, 351)
+        Me.ClientSize = New System.Drawing.Size(604, 341)
         Me.Controls.Add(Me.Gbx_Botones)
         Me.Controls.Add(Me.gbx_Filtro)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -493,4 +519,6 @@ Partial Class frm_ReportesDiarios
     Friend WithEvents lbl_FechaAplicacion As System.Windows.Forms.Label
     Friend WithEvents dtp_FechaAplicacion As System.Windows.Forms.DateTimePicker
     Friend WithEvents lbl_DiaSemana As System.Windows.Forms.Label
+    Friend WithEvents cbx_Moneda As CheckBox
+    Friend WithEvents cbx_Cia As CheckBox
 End Class
