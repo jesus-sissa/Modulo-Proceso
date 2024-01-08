@@ -34,6 +34,7 @@ Partial Class frm_GuardarArchivo
         Me.Lbl_Azul = New System.Windows.Forms.Label()
         Me.Lbl_Verde = New System.Windows.Forms.Label()
         Me.lsv_Servicios = New Modulo_Proceso.cp_Listview()
+        Me.Chk_TodosBanregio = New System.Windows.Forms.CheckBox()
         Me.gbx_Botones.SuspendLayout()
         Me.gbx_Datos.SuspendLayout()
         Me.SuspendLayout()
@@ -102,13 +103,14 @@ Partial Class frm_GuardarArchivo
         Me.gbx_Datos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gbx_Datos.Controls.Add(Me.Chk_TodosBanregio)
         Me.gbx_Datos.Controls.Add(Me.Lbl_Registros)
         Me.gbx_Datos.Controls.Add(Me.Lbl_Azul)
         Me.gbx_Datos.Controls.Add(Me.Lbl_Verde)
         Me.gbx_Datos.Controls.Add(Me.lsv_Servicios)
-        Me.gbx_Datos.Location = New System.Drawing.Point(3, 27)
+        Me.gbx_Datos.Location = New System.Drawing.Point(3, 12)
         Me.gbx_Datos.Name = "gbx_Datos"
-        Me.gbx_Datos.Size = New System.Drawing.Size(788, 491)
+        Me.gbx_Datos.Size = New System.Drawing.Size(788, 506)
         Me.gbx_Datos.TabIndex = 2
         Me.gbx_Datos.TabStop = False
         '
@@ -129,7 +131,7 @@ Partial Class frm_GuardarArchivo
         Me.Lbl_Azul.AutoSize = True
         Me.Lbl_Azul.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Azul.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Lbl_Azul.Location = New System.Drawing.Point(153, 467)
+        Me.Lbl_Azul.Location = New System.Drawing.Point(153, 482)
         Me.Lbl_Azul.Name = "Lbl_Azul"
         Me.Lbl_Azul.Size = New System.Drawing.Size(137, 13)
         Me.Lbl_Azul.TabIndex = 2
@@ -141,7 +143,7 @@ Partial Class frm_GuardarArchivo
         Me.Lbl_Verde.AutoSize = True
         Me.Lbl_Verde.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Verde.ForeColor = System.Drawing.Color.Green
-        Me.Lbl_Verde.Location = New System.Drawing.Point(9, 467)
+        Me.Lbl_Verde.Location = New System.Drawing.Point(9, 482)
         Me.Lbl_Verde.Name = "Lbl_Verde"
         Me.Lbl_Verde.Size = New System.Drawing.Size(138, 13)
         Me.Lbl_Verde.TabIndex = 1
@@ -172,10 +174,22 @@ Partial Class frm_GuardarArchivo
         Me.lsv_Servicios.Row7 = 0
         Me.lsv_Servicios.Row8 = 0
         Me.lsv_Servicios.Row9 = 0
-        Me.lsv_Servicios.Size = New System.Drawing.Size(776, 428)
+        Me.lsv_Servicios.Size = New System.Drawing.Size(776, 443)
         Me.lsv_Servicios.TabIndex = 0
         Me.lsv_Servicios.UseCompatibleStateImageBehavior = False
         Me.lsv_Servicios.View = System.Windows.Forms.View.Details
+        '
+        'Chk_TodosBanregio
+        '
+        Me.Chk_TodosBanregio.AutoSize = True
+        Me.Chk_TodosBanregio.Checked = True
+        Me.Chk_TodosBanregio.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Chk_TodosBanregio.Location = New System.Drawing.Point(5, 11)
+        Me.Chk_TodosBanregio.Name = "Chk_TodosBanregio"
+        Me.Chk_TodosBanregio.Size = New System.Drawing.Size(51, 17)
+        Me.Chk_TodosBanregio.TabIndex = 54
+        Me.Chk_TodosBanregio.Text = "Todo"
+        Me.Chk_TodosBanregio.UseVisualStyleBackColor = True
         '
         'frm_GuardarArchivo
         '
@@ -207,4 +221,5 @@ Partial Class frm_GuardarArchivo
     Friend WithEvents btn_GuardarXficha As System.Windows.Forms.Button
     Friend WithEvents Lbl_Registros As System.Windows.Forms.Label
     Friend WithEvents lsv_Servicios As cp_Listview
+    Friend WithEvents Chk_TodosBanregio As CheckBox
 End Class

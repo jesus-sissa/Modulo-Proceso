@@ -12281,11 +12281,30 @@ Public Class Cn_Proceso
             Return Nothing
         End Try
     End Function
+    Public Shared Function fn_ProCuentasApi(ByVal Id_Sesion As Integer, Id_CajaBancaria As Integer, Id_Servicios As String) As DataTable
 
-    Public Shared Function fn_Pro_DepositosApi(ByVal Id_Sesion As Integer, Id_Servicios As String) As DataTable
+        Dim cmd As SqlCommand = Crea_Comando("SProcedure_CuentasBanregioApi", CommandType.StoredProcedure, Crea_ConexionSTD)
+        Crea_Parametro(cmd, "@Id_Session", SqlDbType.Int, Id_Sesion)
+        Crea_Parametro(cmd, "@Id_CajaBancaria", SqlDbType.Int, Id_CajaBancaria)
+        Crea_Parametro(cmd, "@Id_Servicios", SqlDbType.VarChar, Id_Servicios)
+
+        Dim Tbl As DataTable
+        Try
+            Tbl = EjecutaConsulta(cmd)
+
+
+        Catch ex As Exception
+            TrataEx(ex)
+            Return New DataTable
+        End Try
+        Return Tbl
+    End Function
+
+    Public Shared Function fn_Pro_DepositosApi(ByVal Id_Sesion As Integer, ByVal Id_CajaBancaria As Integer, Id_Servicios As String) As DataTable
 
         Dim cmd As SqlCommand = Crea_Comando("SProcedure_DepositosBanregioApi", CommandType.StoredProcedure, Crea_ConexionSTD)
         Crea_Parametro(cmd, "@Id_Session", SqlDbType.Int, Id_Sesion)
+        Crea_Parametro(cmd, "@Id_CajaBancaria", SqlDbType.Int, Id_CajaBancaria)
         Crea_Parametro(cmd, "@Id_Servicios", SqlDbType.VarChar, Id_Servicios)
 
         Dim Tbl As DataTable
@@ -12363,30 +12382,17 @@ Public Class Cn_Proceso
         End Try
         Return Tbl
     End Function
-    Public Shared Function fn_ProCuentasApi(ByVal Id_Sesion As Integer, Id_CajaBancaria As Integer, Id_Servicios As String) As DataTable
 
-        Dim cmd As SqlCommand = Crea_Comando("SProcedure_CuentasBanregioApi", CommandType.StoredProcedure, Crea_ConexionSTD)
-        Crea_Parametro(cmd, "@Id_Session", SqlDbType.Int, Id_Sesion)
-        Crea_Parametro(cmd, "@Id_CajaBancaria", SqlDbType.Int, Id_CajaBancaria)
-        Crea_Parametro(cmd, "@Id_Servicios", SqlDbType.VarChar, Id_Servicios)
-
-        Dim Tbl As DataTable
-        Try
-            Tbl = EjecutaConsulta(cmd)
-
-
-        Catch ex As Exception
-            TrataEx(ex)
-            Return New DataTable
-        End Try
-        Return Tbl
-    End Function
 
     Public Shared Function fn_ReadFileList(ByVal Lsv As cp_Listview, ByVal Id_Sesion As Integer) As Boolean
         Try
             Dim cmd As SqlCommand = Crea_Comando("Sprocedure_Read_ArchivosBanregio", CommandType.StoredProcedure, Crea_ConexionSTD)
             Crea_Parametro(cmd, "@Id_Session", SqlDbType.Int, Id_Sesion)
             Lsv.Actualizar(cmd, "Id_Archivo")
+
+            Lsv.Columns(10).Width = 0 'ArchivoJson
+            Lsv.Columns(11).Width = 0 'Id_Sesion
+
             Return True
         Catch ex As Exception
             TrataEx(ex)

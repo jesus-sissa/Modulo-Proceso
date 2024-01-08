@@ -64,8 +64,6 @@ Public Class frm_GuardarArchivo
                 Call Archivo_SANTANDER(row)
             ElseIf row("Tipo_Archivo") = "BAJIO" Then
                 Call Archivo_BAJIO(row)
-            ElseIf row("Tipo_Archivo") = "BAJIO" Then
-                Call Archivo_BAJIO(row)
             Else
                 Call Archivo_OTROS(row)
             End If
@@ -84,7 +82,6 @@ Public Class frm_GuardarArchivo
         Dim _Banregio As New BanregioApi
         Dim _Cuentas As DataTable
         Dim _Depositos As DataTable
-        Dim _FichasTipos As DataTable
         Dim _EfectivoDesglose As DataTable
         Dim _Cheques As DataTable
         Dim Id_Servicios As String = String.Empty
@@ -100,7 +97,7 @@ Public Class frm_GuardarArchivo
 
 
         _Cuentas = fn_ProCuentasApi(Id_Sesion, Id_CajaBancaria, Id_Servicios)
-        _Depositos = fn_Pro_DepositosApi(Id_Sesion, Id_Servicios)
+        _Depositos = fn_Pro_DepositosApi(Id_Sesion, Id_CajaBancaria, Id_Servicios)
         _EfectivoDesglose = fn_EfectivoDesglose(Id_Sesion, Id_CajaBancaria, Id_Servicios)
         _Cheques = fn_Cheques(Id_Sesion, Id_CajaBancaria, Id_Servicios)
         'Dim JsonStrin = JsonConvert.SerializeObject(s.GeneraJson(_Cuentas, _Depositos, _FichasTipos, _EfectivoDesglose, _Cheques))
@@ -1656,6 +1653,14 @@ Diferencia:
 
     End Sub
 
+    Private Sub Chk_TodosBanregio_CheckedChanged(sender As Object, e As EventArgs) Handles Chk_TodosBanregio.CheckedChanged
+        ActivarDesactivarBanregio()
+    End Sub
+    Public Sub ActivarDesactivarBanregio()
+        For Each item As ListViewItem In lsv_Servicios.Items
+            item.Checked = Chk_TodosBanregio.Checked
+        Next
+    End Sub
     Private Sub btn_Buscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         'SegundosDesconexion = 0
         'Call Buscar_Envase(tbx_Buscar.Text)

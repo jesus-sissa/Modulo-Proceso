@@ -37,26 +37,24 @@ Partial Class frm_ArchivoDepositos
         Me.btn_Enviar = New System.Windows.Forms.Button()
         Me.btn_Cerrar = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cmb_Sesiones = New Modulo_Proceso.cp_cmb_Parametro()
-        Me.lbl_Sesion = New System.Windows.Forms.Label()
-        Me.lbl_Fecha = New System.Windows.Forms.Label()
-        Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Lsv_Banregio = New Modulo_Proceso.cp_Listview()
-        Me.Chk_TodosBanregio = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmb_Sesion = New Modulo_Proceso.cp_cmb_Simple()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lbl_Sesion = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Chk_TodosBanregio = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Lsv_Banregio = New Modulo_Proceso.cp_Listview()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.gbx_ArchivosDepositos.SuspendLayout()
         Me.gbx_Botones.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -232,146 +230,6 @@ Partial Class frm_ArchivoDepositos
         Me.TabPage2.Text = "BANREGIO"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.cmb_Sesiones)
-        Me.GroupBox1.Controls.Add(Me.lbl_Sesion)
-        Me.GroupBox1.Controls.Add(Me.lbl_Fecha)
-        Me.GroupBox1.Controls.Add(Me.dtp_Fecha)
-        Me.GroupBox1.Controls.Add(Me.ProgressBar1)
-        Me.GroupBox1.Controls.Add(Me.Chk_TodosBanregio)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Lsv_Banregio)
-        Me.GroupBox1.Location = New System.Drawing.Point(1, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1042, 456)
-        Me.GroupBox1.TabIndex = 4
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Archivos"
-        '
-        'cmb_Sesiones
-        '
-        Me.cmb_Sesiones.Cia = False
-        Me.cmb_Sesiones.Control_Siguiente = Nothing
-        Me.cmb_Sesiones.DisplayMember = "Numero_Sesion"
-        Me.cmb_Sesiones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_Sesiones.Empresa = False
-        Me.cmb_Sesiones.FormattingEnabled = True
-        Me.cmb_Sesiones.Location = New System.Drawing.Point(249, 21)
-        Me.cmb_Sesiones.MaxDropDownItems = 20
-        Me.cmb_Sesiones.Name = "cmb_Sesiones"
-        Me.cmb_Sesiones.NombreParametro = "@Fecha"
-        Me.cmb_Sesiones.Pista = False
-        Me.cmb_Sesiones.Size = New System.Drawing.Size(132, 21)
-        Me.cmb_Sesiones.StoredProcedure = "Pro_Sesion_GetByFecha"
-        Me.cmb_Sesiones.Sucursal = True
-        Me.cmb_Sesiones.TabIndex = 17
-        Me.cmb_Sesiones.Tipodedatos = System.Data.SqlDbType.DateTime
-        Me.cmb_Sesiones.ValorParametro = Nothing
-        Me.cmb_Sesiones.ValueMember = "Id_Sesion"
-        '
-        'lbl_Sesion
-        '
-        Me.lbl_Sesion.Location = New System.Drawing.Point(204, 26)
-        Me.lbl_Sesion.Name = "lbl_Sesion"
-        Me.lbl_Sesion.Size = New System.Drawing.Size(39, 13)
-        Me.lbl_Sesion.TabIndex = 16
-        Me.lbl_Sesion.Text = "Sesion"
-        '
-        'lbl_Fecha
-        '
-        Me.lbl_Fecha.AutoSize = True
-        Me.lbl_Fecha.Location = New System.Drawing.Point(5, 26)
-        Me.lbl_Fecha.Name = "lbl_Fecha"
-        Me.lbl_Fecha.Size = New System.Drawing.Size(37, 13)
-        Me.lbl_Fecha.TabIndex = 14
-        Me.lbl_Fecha.Text = "Fecha"
-        '
-        'dtp_Fecha
-        '
-        Me.dtp_Fecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtp_Fecha.Location = New System.Drawing.Point(51, 22)
-        Me.dtp_Fecha.Name = "dtp_Fecha"
-        Me.dtp_Fecha.Size = New System.Drawing.Size(130, 20)
-        Me.dtp_Fecha.TabIndex = 15
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar1.Location = New System.Drawing.Point(7, 427)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(1029, 23)
-        Me.ProgressBar1.TabIndex = 10
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(961, 36)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Registros: 0"
-        '
-        'Lsv_Banregio
-        '
-        Me.Lsv_Banregio.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Lsv_Banregio.CheckBoxes = True
-        Me.Lsv_Banregio.FullRowSelect = True
-        Me.Lsv_Banregio.HideSelection = False
-        Me.Lsv_Banregio.Location = New System.Drawing.Point(7, 72)
-        ListViewColumnSorter2.Order = System.Windows.Forms.SortOrder.None
-        ListViewColumnSorter2.SortColumn = 0
-        Me.Lsv_Banregio.Lvs = ListViewColumnSorter2
-        Me.Lsv_Banregio.MultiSelect = False
-        Me.Lsv_Banregio.Name = "Lsv_Banregio"
-        Me.Lsv_Banregio.Row1 = 10
-        Me.Lsv_Banregio.Row10 = 0
-        Me.Lsv_Banregio.Row2 = 10
-        Me.Lsv_Banregio.Row3 = 10
-        Me.Lsv_Banregio.Row4 = 10
-        Me.Lsv_Banregio.Row5 = 10
-        Me.Lsv_Banregio.Row6 = 10
-        Me.Lsv_Banregio.Row7 = 10
-        Me.Lsv_Banregio.Row8 = 0
-        Me.Lsv_Banregio.Row9 = 0
-        Me.Lsv_Banregio.Size = New System.Drawing.Size(1029, 348)
-        Me.Lsv_Banregio.TabIndex = 7
-        Me.Lsv_Banregio.UseCompatibleStateImageBehavior = False
-        Me.Lsv_Banregio.View = System.Windows.Forms.View.Details
-        '
-        'Chk_TodosBanregio
-        '
-        Me.Chk_TodosBanregio.AutoSize = True
-        Me.Chk_TodosBanregio.Checked = True
-        Me.Chk_TodosBanregio.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.Chk_TodosBanregio.Location = New System.Drawing.Point(9, 49)
-        Me.Chk_TodosBanregio.Name = "Chk_TodosBanregio"
-        Me.Chk_TodosBanregio.Size = New System.Drawing.Size(51, 17)
-        Me.Chk_TodosBanregio.TabIndex = 9
-        Me.Chk_TodosBanregio.Text = "Todo"
-        Me.Chk_TodosBanregio.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.Modulo_Proceso.My.Resources.Resources.Buscar1
-        Me.Button1.Location = New System.Drawing.Point(400, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(140, 30)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Cargar Archivos"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -410,6 +268,122 @@ Partial Class frm_ArchivoDepositos
         Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.cmb_Sesion)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.lbl_Sesion)
+        Me.GroupBox1.Controls.Add(Me.ProgressBar1)
+        Me.GroupBox1.Controls.Add(Me.Chk_TodosBanregio)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Lsv_Banregio)
+        Me.GroupBox1.Location = New System.Drawing.Point(1, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(1042, 456)
+        Me.GroupBox1.TabIndex = 4
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Archivos"
+        '
+        'cmb_Sesion
+        '
+        Me.cmb_Sesion.Control_Siguiente = Nothing
+        Me.cmb_Sesion.DisplayMember = "Numero_Sesion"
+        Me.cmb_Sesion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_Sesion.Empresa = False
+        Me.cmb_Sesion.FormattingEnabled = True
+        Me.cmb_Sesion.Location = New System.Drawing.Point(52, 23)
+        Me.cmb_Sesion.MaxDropDownItems = 20
+        Me.cmb_Sesion.Name = "cmb_Sesion"
+        Me.cmb_Sesion.Pista = False
+        Me.cmb_Sesion.Size = New System.Drawing.Size(164, 21)
+        Me.cmb_Sesion.StoredProcedure = "Pro_Sesion_Get"
+        Me.cmb_Sesion.Sucursal = True
+        Me.cmb_Sesion.TabIndex = 19
+        Me.cmb_Sesion.ValueMember = "Id_Sesion"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = Global.Modulo_Proceso.My.Resources.Resources.Buscar1
+        Me.Button1.Location = New System.Drawing.Point(258, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(140, 30)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Cargar Archivos"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lbl_Sesion
+        '
+        Me.lbl_Sesion.Location = New System.Drawing.Point(7, 26)
+        Me.lbl_Sesion.Name = "lbl_Sesion"
+        Me.lbl_Sesion.Size = New System.Drawing.Size(39, 13)
+        Me.lbl_Sesion.TabIndex = 16
+        Me.lbl_Sesion.Text = "Sesion"
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProgressBar1.Location = New System.Drawing.Point(7, 427)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(1029, 23)
+        Me.ProgressBar1.TabIndex = 10
+        '
+        'Chk_TodosBanregio
+        '
+        Me.Chk_TodosBanregio.AutoSize = True
+        Me.Chk_TodosBanregio.Checked = True
+        Me.Chk_TodosBanregio.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Chk_TodosBanregio.Location = New System.Drawing.Point(9, 49)
+        Me.Chk_TodosBanregio.Name = "Chk_TodosBanregio"
+        Me.Chk_TodosBanregio.Size = New System.Drawing.Size(51, 17)
+        Me.Chk_TodosBanregio.TabIndex = 9
+        Me.Chk_TodosBanregio.Text = "Todo"
+        Me.Chk_TodosBanregio.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(961, 36)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.TabIndex = 8
+        Me.Label2.Text = "Registros: 0"
+        '
+        'Lsv_Banregio
+        '
+        Me.Lsv_Banregio.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Lsv_Banregio.FullRowSelect = True
+        Me.Lsv_Banregio.HideSelection = False
+        Me.Lsv_Banregio.Location = New System.Drawing.Point(7, 72)
+        ListViewColumnSorter2.Order = System.Windows.Forms.SortOrder.None
+        ListViewColumnSorter2.SortColumn = 0
+        Me.Lsv_Banregio.Lvs = ListViewColumnSorter2
+        Me.Lsv_Banregio.MultiSelect = False
+        Me.Lsv_Banregio.Name = "Lsv_Banregio"
+        Me.Lsv_Banregio.Row1 = 5
+        Me.Lsv_Banregio.Row10 = 5
+        Me.Lsv_Banregio.Row2 = 5
+        Me.Lsv_Banregio.Row3 = 10
+        Me.Lsv_Banregio.Row4 = 15
+        Me.Lsv_Banregio.Row5 = 5
+        Me.Lsv_Banregio.Row6 = 5
+        Me.Lsv_Banregio.Row7 = 10
+        Me.Lsv_Banregio.Row8 = 10
+        Me.Lsv_Banregio.Row9 = 10
+        Me.Lsv_Banregio.Size = New System.Drawing.Size(1029, 348)
+        Me.Lsv_Banregio.TabIndex = 7
+        Me.Lsv_Banregio.UseCompatibleStateImageBehavior = False
+        Me.Lsv_Banregio.View = System.Windows.Forms.View.Details
+        '
         'frm_ArchivoDepositos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -424,9 +398,9 @@ Partial Class frm_ArchivoDepositos
         Me.gbx_ArchivosDepositos.PerformLayout()
         Me.gbx_Botones.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -448,13 +422,11 @@ Partial Class frm_ArchivoDepositos
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label2 As Label
     Friend WithEvents Lsv_Banregio As cp_Listview
-    Friend WithEvents cmb_Sesiones As cp_cmb_Parametro
     Friend WithEvents lbl_Sesion As Label
-    Friend WithEvents lbl_Fecha As Label
-    Friend WithEvents dtp_Fecha As DateTimePicker
     Friend WithEvents Chk_TodosBanregio As CheckBox
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents cmb_Sesion As cp_cmb_Simple
 End Class

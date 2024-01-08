@@ -3945,20 +3945,12 @@ C:\Users\jesus.ortega\Desktop\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.exe
 C:\Users\jesus.ortega\Desktop\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.xml
 C:\Users\jesus.ortega\Desktop\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.pdb
 C:\Users\jesus.ortega\Desktop\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ImportesPorRecoleecciones.resources
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe.config
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe.manifest
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.application
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.pdb
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.xml
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Api_Bank.dll
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\stdole.dll
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Api_Bank.pdb
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.ResolveComReference.cache
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActualizacionesConsultar.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AcumuladosXCajeros.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AlertasConsultas.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ArchivoDepositos.resources
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ArchivosBanregioDetalle.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AsignarPre.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_BuscarRemisionxEnvase.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CajasBancarias.resources
@@ -4080,6 +4072,17 @@ D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Resources.
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReportesDiarios.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.GenerateResource.cache
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.CoreCompileInputs.cache
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe.config
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe.manifest
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.application
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.pdb
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.xml
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Api_Bank.dll
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Newtonsoft.Json.dll
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\stdole.dll
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Api_Bank.pdb
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Newtonsoft.Json.xml
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.TrustInfo.xml
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.exe.manifest
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.application
@@ -4087,6 +4090,5 @@ D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.Cop
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.exe
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.xml
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.pdb
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Newtonsoft.Json.dll
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Newtonsoft.Json.xml
+D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_ArchivosBanregioDepositos.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.AssemblyReference.cache

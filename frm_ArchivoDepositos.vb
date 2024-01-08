@@ -9,6 +9,7 @@ Public Class frm_ArchivoDepositos
 
     Private Sub frm_ArchivoDepositos_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         lsv_Archivos.Columns.Add("Archivos", 500)
+        cmb_Sesion.Actualizar()
     End Sub
 
 
@@ -184,22 +185,6 @@ Public Class frm_ArchivoDepositos
     End Sub
 
 #Region "API BANREGIO"
-    Private Sub dtp_Fecha_ValueChanged(sender As Object, e As EventArgs) Handles dtp_Fecha.ValueChanged
-        cmb_Sesiones.ValorParametro = dtp_Fecha.Value
-        cmb_Sesiones.Actualizar()
-
-        If cmb_Sesiones.Items.Count = 2 Then
-            cmb_Sesiones.SelectedIndex = 1
-        End If
-    End Sub
-
-    Private Sub cmb_Sesiones_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmb_Sesiones.SelectedValueChanged
-        fn_ReadFileList(Lsv_Banregio, cmb_Sesiones.SelectedValue)
-        ActivarDesactivarBanregio()
-
-    End Sub
-
-
     Public Sub ActivarDesactivarBanregio()
         For Each item As ListViewItem In Lsv_Banregio.Items
             item.Checked = Chk_TodosBanregio.Checked
@@ -207,7 +192,7 @@ Public Class frm_ArchivoDepositos
     End Sub
 
     Private Sub Chk_TodosBanregio_CheckedChanged(sender As Object, e As EventArgs) Handles Chk_TodosBanregio.CheckedChanged
-        ActivarDesactivarBanregio()
+        'ActivarDesactivarBanregio()
     End Sub
 
     Private Sub Btn_EnviarArchivosBanregio_Click(sender As Object, e As EventArgs)
@@ -215,12 +200,35 @@ Public Class frm_ArchivoDepositos
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        '8 es la posicion del Json en el listview
         Dim Json(Lsv_Banregio.Items.Count - 1) As String
         For cont As Integer = 0 To Json.Length - 1
-            Json(cont) = Lsv_Banregio.Items(cont).SubItems(7).Text
+            Json(cont) = Lsv_Banregio.Items(cont).SubItems(10).Text
         Next
         Dim s As New Class1
         Dim Peticion As String = JsonConvert.SerializeObject(s.General_Json(Json))
+
+
+
+    End Sub
+
+    Private Sub cmb_Sesion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_Sesion.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cmb_Sesion_SelectedValueChanged(sender As Object, e As EventArgs) Handles cmb_Sesion.SelectedValueChanged
+        fn_ReadFileList(Lsv_Banregio, cmb_Sesion.SelectedValue)
+        'ActivarDesactivarBanregio()
+    End Sub
+
+    Private Sub Lsv_Banregio_DoubleClick(sender As Object, e As EventArgs) Handles Lsv_Banregio.DoubleClick
+        Dim frm As New Frm_ArchivosBanregioDepositos
+        frm.Json = Lsv_Banregio.SelectedItems(0).SubItems(10).Text
+        frm.Titulo = Lsv_Banregio.SelectedItems(0).SubItems(3).Text + " / " + Lsv_Banregio.SelectedItems(0).SubItems(2).Text
+        frm.ShowDialog()
+    End Sub
+
+    Private Sub Lsv_Banregio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Lsv_Banregio.SelectedIndexChanged
 
     End Sub
 #End Region
