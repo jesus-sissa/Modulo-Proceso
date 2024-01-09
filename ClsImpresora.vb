@@ -5,7 +5,7 @@ Imports System.Drawing.Printing
 Imports System.Windows.Forms
 
 Public Class ClsImpresora
-
+    '
 
 #Region "Variables"
 
