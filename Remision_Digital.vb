@@ -548,7 +548,7 @@ Public Class Remision_Digital
         End Using
     End Function
 #End Region
-
+    ''
     Public Shared Function fn_EnLetras(ByVal numero As String, Optional ByVal IDMoneda As Integer = 0) As String
 
         Dim BandBilion As Boolean
