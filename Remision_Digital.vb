@@ -6,7 +6,7 @@ Imports Modulo_Proceso.Cn_Datos
 Public Class Remision_Digital
 
 #Region "Funciones"
-    ''
+
     Public Shared Function obtenerPunto(ByVal NumeroRemision As String) As Integer
 
         Try
