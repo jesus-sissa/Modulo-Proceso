@@ -6,7 +6,7 @@ Imports System.Windows.Forms
 
 Public Class ClsImpresora
 
-
+    'hola
 #Region "Variables"
 
     Private components As System.ComponentModel.Container
