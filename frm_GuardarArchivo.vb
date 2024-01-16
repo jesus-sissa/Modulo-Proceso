@@ -52,7 +52,7 @@ Public Class frm_GuardarArchivo
 
         Dim row As DataRow = fn_GuardarArchivo_ObtenNombre(Id_CajaBancaria, Fecha_Aplicacion, Id_Cia)
 
-        Exit Sub
+        'Exit Sub
         If row("Tipo_Archivo") = "AFIRME" Then
             Call Archivo_AFIRME(row)
         ElseIf row("Tipo_Archivo") = "BANORTE" Then
