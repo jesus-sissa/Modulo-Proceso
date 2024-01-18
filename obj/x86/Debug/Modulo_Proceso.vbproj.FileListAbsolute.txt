@@ -3806,7 +3806,6 @@ D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.pdb
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.xml
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\stdole.dll
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.AssemblyReference.cache
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.ResolveComReference.cache
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActualizacionesConsultar.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AcumuladosXCajeros.resources
