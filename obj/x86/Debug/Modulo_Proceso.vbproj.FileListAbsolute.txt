@@ -3806,7 +3806,6 @@ D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.pdb
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.xml
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\bin\x86\Debug\stdole.dll
-D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.AssemblyReference.cache
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.ResolveComReference.cache
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActualizacionesConsultar.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AcumuladosXCajeros.resources
@@ -4086,3 +4085,162 @@ C:\Users\jesus.ortega\Desktop\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.pdb
 C:\Users\jesus.ortega\Desktop\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ImportesPorRecoleecciones.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ImportesPorRecoleecciones.resources
 D:\REPOSITORY\SOURCE CODE\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DescargarRemision.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe.config
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe.manifest
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.application
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.exe
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.pdb
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\Modulo Proceso.xml
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportSource.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.Shared.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.Windows.Forms.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\stdole.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\AxShockwaveFlashObjects.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\bin\x86\Debug\ShockwaveFlashObjects.dll
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.AssemblyReference.cache
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.ResolveComReference.cache
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActualizacionesConsultar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AcumuladosXCajeros.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AlertasConsultas.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ArchivoDepositos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AsignarPre.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_BuscarRemisionxEnvase.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CajasBancarias.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CambiarDenominaciones.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CatalogarServicios.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CatalogoCasaV.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CatalogoOrdenesCuentas.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_ClientesInternosAExternos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConfigurarPlantilla.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaDepositosLavado.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaRemision.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaSaldosProc.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CrearDotacionesH2H.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DescargarArchivo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActasReporteD.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DescargarRemision.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Dialogo2014.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_EfectivoXCliente.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_EmpleadosAutoriza.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_EmpleadosCancelanDespachos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ImportesPorRecoleecciones.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Aceptar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_CancelarDev.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_CancelarEnvio.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_EntradaSaldo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Preparar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_FirmaConexion.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_GrupoDeposito.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_GrupoDota.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Enviar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_RecibirDev.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Regresar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Validar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_monitoreo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_MonitoreoP.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_OrdenesServicios.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ProcesoSaldos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_RecibirServicioRec.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CartaAcceso.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CartasAccesoConsulta.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CatalogoCuentas.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Observaciones.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_PresentacionesVer.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DetalleDepositos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_RecuentoD.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Reporte.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActasReporte.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReporteBilletesFalsos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReporteFallas.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReporteFallasConsultar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReporteFallasI.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReporteFallasS.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Consultar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_SaldoCuadre.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Saldos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Settings.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_TiposdeDiferencia.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Vales.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ValesdeDespensa.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ActasValidar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ValidarArchivo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_VerificacionXCajeros.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_VisorImagenes.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.pruebaaaa.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_MaterialesAcepta.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_MaterialesReporte.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaCheques.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_GenerarZip.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_TabularCheques.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_TXTComprimir.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DepositosPorCuenta.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_BuscarCliente.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ClientesProceso.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CuentasModal.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_EnviarMensajes.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_GuardarArchivo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_MaterialesInventario.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_NumeroSugeridoModal.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ParcialesModal.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_FichasDesglose.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaDepositos.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaDotaciones.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CancelaResguardo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_About.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AbrirSesion.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_AsignarServicios.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Frm_Buscar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DotacionesCancelar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CancelaEnvioBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LotesEfectivo_Cancelar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CancelarAsignacion.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_CancelaRegEnvioBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ConsultaSaldo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Contabilizar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Corte.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_EliminarFicha.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_EnviarDotaBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_FichasModal.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_FirmaElectronica.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LoginContra.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_LoginEmpresa.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DotacionesCapturar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_PrepararResguardo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Rastreo.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_RecibeDotacionRegBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_RecibeResguardoBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_RegresoaBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReimprimirCorte.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReporteTabular.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ResguardoaBoveda.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Login.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_MENU.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Scan.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_TXTadmin.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_Usuarios.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_DotacionesValidar.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_VerMensajes.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.Resources.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.frm_ReportesDiarios.resources
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.GenerateResource.cache
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.CoreCompileInputs.cache
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.TrustInfo.xml
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.exe.manifest
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.application
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo_Proceso.vbproj.CopyComplete
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.exe
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.xml
+D:\REPOSITORY\SOURCE CODE\SIAC ERP\Modulo_Proceso\obj\x86\Debug\Modulo Proceso.pdb
